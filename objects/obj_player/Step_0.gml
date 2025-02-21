@@ -1,14 +1,12 @@
 //create gravity to handle jumps
 ysp += 0.3
-xsp = 0
 
 //move right or left when arrow key is pressed
-if keyboard_check(vk_right) {
-	xsp = +5
-}
-if keyboard_check(vk_left) {
-	xsp = -5
-}
+var _rightkey = keyboard_check(vk_right)
+var _leftkey = keyboard_check(vk_left) 
+var _move = _rightkey - _leftkey
+
+xsp = spd * _move
 
 //reset jumps
 if place_meeting(x, y+ysp, obj_platform) {
@@ -16,6 +14,19 @@ if place_meeting(x, y+ysp, obj_platform) {
         jump_current = jump_number;
     }
     ysp = 0;
+}
+//wall hang/ jump
+if place_meeting(x+xsp, y, obj_platform) || place_meeting(x-xsp, y, obj_platform) {
+	jump_current = jump_number - 1
+	if(!on_wall) {ysp = 0.5}
+	else {ysp -= 0.29}
+	on_wall = true
+} else {
+	on_wall = false
+}
+
+if(wall_direction != 0) {
+	xsp = spd * wall_direction
 }
 
 //allow player to stand on boxes
