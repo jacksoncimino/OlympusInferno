@@ -43,11 +43,8 @@
     {"id":{"name":"spr_temp_dodge","path":"sprites/spr_temp_dodge/spr_temp_dodge.yy",},},
     {"id":{"name":"spr_temp_move_left","path":"sprites/spr_temp_move_left/spr_temp_move_left.yy",},},
     {"id":{"name":"spr_temp_move_right","path":"sprites/spr_temp_move_right/spr_temp_move_right.yy",},},
-<<<<<<< HEAD
-=======
     {"id":{"name":"spr_temp_parry","path":"sprites/spr_temp_parry/spr_temp_parry.yy",},},
     {"id":{"name":"spr_temp_platform","path":"sprites/spr_temp_platform/spr_temp_platform.yy",},},
->>>>>>> 8415e3dd1f9374e0757926e060101c810b4cbc00
     {"id":{"name":"spr_temp","path":"sprites/spr_temp/spr_temp.yy",},},
   ],
   "resourceType":"GMProject",
