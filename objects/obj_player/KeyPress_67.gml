@@ -9,8 +9,9 @@ if (keyboard_check(vk_right) || keyboard_check(vk_left) ) {
 		xsp = _move * spd * 4
 		dodge_current--
 	}
-} else {
+} else if (keyboard_check(vk_down)) {
 	global.player_state = player_states.PARRYING
+	sprite_index = spr_temp_parry
 }
 
 //length of dodge/parry

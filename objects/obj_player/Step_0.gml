@@ -6,7 +6,7 @@ var _rightkey = keyboard_check(vk_right)
 var _leftkey = keyboard_check(vk_left) 
 var _move = _rightkey - _leftkey
 
-if !(global.player_state == player_states.DODGING) {
+if (global.player_state == player_states.NONE) {
 	xsp = spd * _move
 	sprite_index = spr_temp
 }
