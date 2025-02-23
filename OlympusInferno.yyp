@@ -42,6 +42,7 @@
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_temp_atk_left","path":"sprites/spr_temp_atk_left/spr_temp_atk_left.yy",},},
     {"id":{"name":"spr_temp_atk_right","path":"sprites/spr_temp_atk_right/spr_temp_atk_right.yy",},},
+    {"id":{"name":"spr_temp_dodge","path":"sprites/spr_temp_dodge/spr_temp_dodge.yy",},},
     {"id":{"name":"spr_temp_move_left","path":"sprites/spr_temp_move_left/spr_temp_move_left.yy",},},
     {"id":{"name":"spr_temp_move_right","path":"sprites/spr_temp_move_right/spr_temp_move_right.yy",},},
     {"id":{"name":"spr_temp_platform","path":"sprites/spr_temp_platform/spr_temp_platform.yy",},},

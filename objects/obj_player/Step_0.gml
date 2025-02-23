@@ -6,12 +6,16 @@ var _rightkey = keyboard_check(vk_right)
 var _leftkey = keyboard_check(vk_left) 
 var _move = _rightkey - _leftkey
 
-xsp = spd * _move
+if !(global.player_state == player_states.DODGING) {
+	xsp = spd * _move
+	sprite_index = spr_temp
+}
 
-//reset jumps
+//reset jumps and dodge
 if place_meeting(x, y+ysp, obj_platform) {
 	if (ysp > 0) {
         jump_current = jump_number;
+		dodge_current = dodge_number;
     }
     ysp = 0;
 }
