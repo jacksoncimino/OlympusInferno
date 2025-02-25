@@ -40,6 +40,8 @@
     {"id":{"name":"obj_tempPlayer","path":"objects/obj_tempPlayer/obj_tempPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
+    {"id":{"name":"spr_olympus_background","path":"sprites/spr_olympus_background/spr_olympus_background.yy",},},
+    {"id":{"name":"spr_olympus_platform","path":"sprites/spr_olympus_platform/spr_olympus_platform.yy",},},
     {"id":{"name":"spr_temp_atk_left","path":"sprites/spr_temp_atk_left/spr_temp_atk_left.yy",},},
     {"id":{"name":"spr_temp_atk_right","path":"sprites/spr_temp_atk_right/spr_temp_atk_right.yy",},},
     {"id":{"name":"spr_temp_dodge","path":"sprites/spr_temp_dodge/spr_temp_dodge.yy",},},
