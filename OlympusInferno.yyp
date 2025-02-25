@@ -34,7 +34,10 @@
   },
   "name":"OlympusInferno",
   "resources":[
+    {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
+    {"id":{"name":"obj_tempPlatform","path":"objects/obj_tempPlatform/obj_tempPlatform.yy",},},
+    {"id":{"name":"obj_tempPlayer","path":"objects/obj_tempPlayer/obj_tempPlayer.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_olympus_background","path":"sprites/spr_olympus_background/spr_olympus_background.yy",},},
