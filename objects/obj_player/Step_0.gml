@@ -7,15 +7,22 @@ var _leftkey = keyboard_check(vk_left)
 var _move = _rightkey - _leftkey
 
 if (global.player_state == player_states.NONE) {
-	xsp = spd * _move
-	sprite_index = spr_temp
+	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
+    if (_move == -1) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
+	if (_move == 0) {
+		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
+		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
+		sprite_index = spr_temp
+	} else {
+		sprite_index = spr_temp_move
+		image_xscale = _move * 2.4
+	}
 }
 
 //reset jumps and dodge
 if place_meeting(x, y+ysp, obj_platform) {
 	if (ysp > 0) {
         jump_current = jump_number;
-		dodge_current = dodge_number;
     }
     ysp = 0;
 }
@@ -30,7 +37,7 @@ if place_meeting(x+xsp, y, obj_platform) || place_meeting(x-xsp, y, obj_platform
 }
 
 if(wall_direction != 0) {
-	xsp = spd * wall_direction
+	xsp = max_spd * wall_direction
 }
 
 //allow player to stand on boxes

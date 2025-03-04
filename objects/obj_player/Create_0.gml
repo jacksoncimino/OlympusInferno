@@ -1,12 +1,14 @@
 xsp = 0
 ysp = 0
-spd = 5
+max_spd = 5
+acceleration = 1
+frict = 0.5
 
 jump_number = 3
 jump_current = 0
 
 dodge_number = 1
-dodge_current = 0
+dodge_current = 1
 
 wall_direction = 0
 on_wall = false
