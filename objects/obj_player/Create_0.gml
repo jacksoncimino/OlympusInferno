@@ -7,6 +7,13 @@ frict = 0.5
 jump_number = 3
 jump_current = 0
 
+//players will have default sprites. Change these for each new player child
+spr_move = spr_temp_move
+spr_basic = spr_temp
+spr_dodge = spr_temp_dodge
+spr_attack = spr_temp_atk
+spr_parry = spr_temp_parry
+
 dodge_number = 1
 dodge_current = 1
 

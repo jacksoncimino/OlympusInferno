@@ -12,9 +12,9 @@ if (global.player_state == player_states.NONE) {
 	if (_move == 0) {
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
-		sprite_index = spr_temp
+		sprite_index = spr_basic
 	} else {
-		sprite_index = spr_temp_move
+		sprite_index = spr_move
 		image_xscale = _move * 2.4
 	}
 }
