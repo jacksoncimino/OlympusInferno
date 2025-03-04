@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tempPlayer",
+  "%Name":"obj_tempEnemy",
   "eventList":[],
   "managed":true,
-  "name":"obj_tempPlayer",
+  "name":"obj_tempEnemy",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_temp",
-    "path":"sprites/spr_temp/spr_temp.yy",
+    "name":"spr_enemy_temp",
+    "path":"sprites/spr_enemy_temp/spr_enemy_temp.yy",
   },
   "spriteMaskId":null,
   "visible":true,

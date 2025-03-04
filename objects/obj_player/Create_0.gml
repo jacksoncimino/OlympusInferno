@@ -1,20 +1,22 @@
+char_vals = get_player_values(object_index);
+
 xsp = 0
 ysp = 0
-max_spd = 5
-acceleration = 1
-frict = 0.5
+max_spd = char_vals.stats.xspd_max
+acceleration = char_vals.stats.xspd_acc
+frict = char_vals.stats.frict
 
-jump_number = 3
+jump_number = char_vals.stats.jumps
 jump_current = 0
 
 //players will have default sprites. Change these for each new player child
-spr_move = spr_temp_move
-spr_basic = spr_temp
-spr_dodge = spr_temp_dodge
-spr_attack = spr_temp_atk
-spr_parry = spr_temp_parry
+spr_move = char_vals.sprites.move
+spr_basic = char_vals.sprites.basic
+spr_dodge = char_vals.sprites.dodge
+spr_attack = char_vals.sprites.attack
+spr_parry = char_vals.sprites.parry
 
-dodge_number = 1
+dodge_number = char_vals.stats.dodges
 dodge_current = 1
 
 wall_direction = 0
@@ -24,7 +26,8 @@ wall_jump_speed = game_get_speed(gamespeed_fps) * 0.3
 enum player_states {
 	NONE,
 	DODGING,
-	PARRYING
+	PARRYING,
+	ATTACKING
 }
 
 global.player_state = player_states.NONE
