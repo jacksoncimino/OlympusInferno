@@ -19,6 +19,23 @@ function get_player_values(char_name){
 				dodges: 1
 			}
 		};
+	case obj_Zeus:
+		return {
+			sprites: {
+				basic: spr_zeus_idle,
+				move: spr_zeus_walk,
+				dodge: spr_zeus_idle,
+				attack: spr_zeus_attack,
+				parry: spr_zeus_idle
+			},
+			stats: {
+				xspd_max: 5,
+				xspd_acc: 1,
+				frict: 0.5,
+				jumps: 3,
+				dodges: 1
+			}
+		};
 	case obj_tempPlayer:
 	default:
 		return {

@@ -8,6 +8,7 @@ if ( dodge_current > 0 ) {
 		sprite_index = spr_dodge
 		xsp = _move * max_spd * 4
 	} else if (keyboard_check(vk_down)) {
+		dodge_current--
 		global.player_state = player_states.PARRYING
 		sprite_index = spr_parry
 	}

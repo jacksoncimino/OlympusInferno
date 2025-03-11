@@ -39,6 +39,7 @@
     {"id":{"name":"obj_tempEnemy","path":"objects/obj_tempEnemy/obj_tempEnemy.yy",},},
     {"id":{"name":"obj_tempPlatform","path":"objects/obj_tempPlatform/obj_tempPlatform.yy",},},
     {"id":{"name":"obj_tempPlayer","path":"objects/obj_tempPlayer/obj_tempPlayer.yy",},},
+    {"id":{"name":"obj_Zeus","path":"objects/obj_Zeus/obj_Zeus.yy",},},
     {"id":{"name":"r_Olympus","path":"rooms/r_Olympus/r_Olympus.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"get_player_values","path":"scripts/get_player_values/get_player_values.yy",},},

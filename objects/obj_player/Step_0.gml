@@ -15,7 +15,7 @@ if (global.player_state == player_states.NONE) {
 		sprite_index = spr_basic
 	} else {
 		sprite_index = spr_move
-		image_xscale = _move * 2.4
+		image_xscale = _move
 	}
 }
 
