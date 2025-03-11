@@ -43,6 +43,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"get_player_values","path":"scripts/get_player_values/get_player_values.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
+    {"id":{"name":"spr_cyclops","path":"sprites/spr_cyclops/spr_cyclops.yy",},},
     {"id":{"name":"spr_enemy_temp_atk","path":"sprites/spr_enemy_temp_atk/spr_enemy_temp_atk.yy",},},
     {"id":{"name":"spr_enemy_temp_dodge","path":"sprites/spr_enemy_temp_dodge/spr_enemy_temp_dodge.yy",},},
     {"id":{"name":"spr_enemy_temp_move","path":"sprites/spr_enemy_temp_move/spr_enemy_temp_move.yy",},},
