@@ -19,6 +19,12 @@ if (global.player_state == player_states.NONE) {
 	}
 }
 
+if (global.player_state == player_states.ATTACKING || sprite_index == spr_attack ) {
+	if (image_index >= sprite_get_number(spr_attack)) { //#frames in sprite - 1
+		global.player_state = player_states.NONE
+	}
+}
+
 //reset jumps and dodge
 if place_meeting(x, y+ysp, obj_platform) {
 	if (ysp > 0) {
