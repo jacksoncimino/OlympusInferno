@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"spr_zeus_attack",
-  "bboxMode":0,
-  "bbox_bottom":64,
-  "bbox_left":5,
-  "bbox_right":57,
-  "bbox_top":0,
+  "bboxMode":2,
+  "bbox_bottom":63,
+  "bbox_left":8,
+  "bbox_right":41,
+  "bbox_top":8,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -21,7 +21,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":76,
+  "height":77,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"4b446241-a815-4eeb-b839-044bd8a352da","blendMode":0,"displayName":"default","isLocked":false,"name":"4b446241-a815-4eeb-b839-044bd8a352da","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -106,5 +106,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":60,
+  "width":61,
 }

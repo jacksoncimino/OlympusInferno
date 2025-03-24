@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
   "%Name":"spr_zeus_idle",
-  "bboxMode":0,
-  "bbox_bottom":62,
+  "bboxMode":2,
+  "bbox_bottom":63,
   "bbox_left":12,
-  "bbox_right":53,
+  "bbox_right":36,
   "bbox_top":5,
   "collisionKind":1,
   "collisionTolerance":0,

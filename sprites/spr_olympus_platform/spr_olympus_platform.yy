@@ -1,11 +1,11 @@
 {
   "$GMSprite":"",
   "%Name":"spr_olympus_platform",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":767,
   "bbox_left":338,
   "bbox_right":1027,
-  "bbox_top":198,
+  "bbox_top":201,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,

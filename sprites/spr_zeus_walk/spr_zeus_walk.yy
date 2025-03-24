@@ -1,10 +1,10 @@
 {
   "$GMSprite":"",
   "%Name":"spr_zeus_walk",
-  "bboxMode":0,
-  "bbox_bottom":60,
+  "bboxMode":2,
+  "bbox_bottom":61,
   "bbox_left":8,
-  "bbox_right":58,
+  "bbox_right":37,
   "bbox_top":7,
   "collisionKind":1,
   "collisionTolerance":0,
