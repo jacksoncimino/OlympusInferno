@@ -34,6 +34,8 @@
   },
   "name":"OlympusInferno",
   "resources":[
+    {"id":{"name":"fnt_health","path":"fonts/fnt_health/fnt_health.yy",},},
+    {"id":{"name":"obj_attack_hitbox","path":"objects/obj_attack_hitbox/obj_attack_hitbox.yy",},},
     {"id":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_OlympusPlatform","path":"objects/obj_OlympusPlatform/obj_OlympusPlatform.yy",},},

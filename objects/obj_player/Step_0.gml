@@ -6,6 +6,7 @@ var _rightkey = keyboard_check(vk_right)
 var _leftkey = keyboard_check(vk_left) 
 var _move = _rightkey - _leftkey
 
+
 if (global.player_state == player_states.NONE) {
 	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
     if (_move == -1) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
@@ -20,7 +21,7 @@ if (global.player_state == player_states.NONE) {
 }
 
 if (global.player_state == player_states.ATTACKING || sprite_index == spr_attack ) {
-	if (image_index >= sprite_get_number(spr_attack)) { //#frames in 
+	if (image_index >= sprite_get_number(spr_attack)) { //#frames in sprite
 		global.player_state = player_states.NONE
 	}
 }

@@ -23,6 +23,8 @@ wall_direction = 0
 on_wall = false
 wall_jump_speed = game_get_speed(gamespeed_fps) * 0.3
 
+hp = 100
+
 enum player_states {
 	NONE,
 	DODGING,
