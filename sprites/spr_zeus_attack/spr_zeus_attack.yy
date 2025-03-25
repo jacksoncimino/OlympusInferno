@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_zeus_attack",
   "bboxMode":2,
-  "bbox_bottom":63,
+  "bbox_bottom":61,
   "bbox_left":8,
   "bbox_right":41,
   "bbox_top":8,
@@ -20,7 +20,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":77,
+  "height":82,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"4b446241-a815-4eeb-b839-044bd8a352da","blendMode":0,"displayName":"default","isLocked":false,"name":"4b446241-a815-4eeb-b839-044bd8a352da","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -46,7 +46,7 @@
     ],
     "top":0,
   },
-  "origin":4,
+  "origin":9,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -121,5 +121,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":61,
+  "width":65,
 }
