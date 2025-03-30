@@ -1,3 +1,3 @@
 hp = 100
-
-isHit = false
+attack_cooldown = 2
+can_attack = true

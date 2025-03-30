@@ -36,6 +36,7 @@
   "resources":[
     {"id":{"name":"fnt_health","path":"fonts/fnt_health/fnt_health.yy",},},
     {"id":{"name":"obj_attack_hitbox","path":"objects/obj_attack_hitbox/obj_attack_hitbox.yy",},},
+    {"id":{"name":"obj_cyclops_atk","path":"objects/obj_cyclops_atk/obj_cyclops_atk.yy",},},
     {"id":{"name":"obj_cyclops","path":"objects/obj_cyclops/obj_cyclops.yy",},},
     {"id":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
@@ -55,6 +56,7 @@
     {"id":{"name":"spr_background_mainmenu","path":"sprites/spr_background_mainmenu/spr_background_mainmenu.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},
     {"id":{"name":"spr_character_select","path":"sprites/spr_character_select/spr_character_select.yy",},},
+    {"id":{"name":"spr_cyclops_attack_1","path":"sprites/spr_cyclops_attack_1/spr_cyclops_attack_1.yy",},},
     {"id":{"name":"spr_enemy_cyclops","path":"sprites/spr_enemy_cyclops/spr_enemy_cyclops.yy",},},
     {"id":{"name":"spr_enemy_temp_atk","path":"sprites/spr_enemy_temp_atk/spr_enemy_temp_atk.yy",},},
     {"id":{"name":"spr_enemy_temp_dodge","path":"sprites/spr_enemy_temp_dodge/spr_enemy_temp_dodge.yy",},},

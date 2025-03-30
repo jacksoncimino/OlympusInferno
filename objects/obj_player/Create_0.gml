@@ -1,15 +1,10 @@
 char_vals = get_player_values(object_index);
 
-startX = x
-startY = y
-
 xsp = 0
 ysp = 0
 max_spd = char_vals.stats.xspd_max
 acceleration = char_vals.stats.xspd_acc
 frict = char_vals.stats.frict
-
-isHit = false
 
 jump_number = char_vals.stats.jumps
 jump_current = 0
