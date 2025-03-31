@@ -38,6 +38,7 @@
     {"id":{"name":"obj_attack_hitbox","path":"objects/obj_attack_hitbox/obj_attack_hitbox.yy",},},
     {"id":{"name":"obj_cyclops_atk","path":"objects/obj_cyclops_atk/obj_cyclops_atk.yy",},},
     {"id":{"name":"obj_cyclops","path":"objects/obj_cyclops/obj_cyclops.yy",},},
+    {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},},
     {"id":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_OlympusPlatform","path":"objects/obj_OlympusPlatform/obj_OlympusPlatform.yy",},},
