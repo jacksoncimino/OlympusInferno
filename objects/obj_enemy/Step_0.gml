@@ -1,4 +1,8 @@
-
+if(state == EnemyStates.HIT) {
+	if(alarm[2] == -1) {
+		alarm[2] = game_get_speed(gamespeed_fps) * 0.7	
+	}
+}
 
 //If the player is attacking, dodge or parry (chance)
 if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_height) and state == EnemyStates.READY and global.player_state == player_states.ATTACKING) {
