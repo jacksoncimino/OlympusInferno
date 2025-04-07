@@ -5,6 +5,7 @@ if(place_meeting(x, y, obj_player) and damage) {
 		
 	} else {
 		obj_player.hp -= 1
+		obj_player.isHit = true
 		damage = false
 	}
 }

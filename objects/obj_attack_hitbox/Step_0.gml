@@ -5,5 +5,6 @@ if(instGrab != noone) {
 		instGrab.dmg ++
 		instGrab.state = EnemyStates.HIT
 		instGrab.image_blend = c_red
+		attacker.special_meter++
 	}
 }

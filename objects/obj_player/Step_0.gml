@@ -7,20 +7,20 @@ var _leftkey = keyboard_check(vk_left)
 var _move = _rightkey - _leftkey
 
 
-if (global.player_state == player_states.NONE || global.player_state == player_states.ATTACKING) {
+if (global.player_state == player_states.NONE || global.player_state == player_states.LIGHT_ATTACK) {
 	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
     if (_move == -1) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
 	if (_move == 0) {
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
-		if (global.player_state != player_states.ATTACKING) {sprite_index = spr_basic}
+		if (global.player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_basic}
 	} else {
-		if (global.player_state != player_states.ATTACKING) {sprite_index = spr_move}
+		if (global.player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_move}
 		image_xscale = _move
 	}
 }
 
-if (global.player_state == player_states.ATTACKING || sprite_index == spr_attack ) {
+if (global.player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
 	//create hitbox for attack
 	var hb_startX = 0
 	var hb_startY = 0
@@ -52,6 +52,7 @@ if (global.player_state == player_states.ATTACKING || sprite_index == spr_attack
 	hitBox.x2 = rect_x2
 	hitBox.y1 = rect_y1
 	hitBox.y2 = rect_y2
+	hitBox.attacker = object_index
 	
 	if (image_index >= sprite_get_number(spr_attack)) { //#frames in sprite
 		global.player_state = player_states.NONE
@@ -89,6 +90,7 @@ if(y > room_height + 500) {
 if(isHit) {
 	if (alarm[3] == -1) {
 		alarm[3] = game_get_speed(gamespeed_fps) * 0.7
+		image_blend = c_red
 	}
 }
 

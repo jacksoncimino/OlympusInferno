@@ -21,6 +21,10 @@ spr_dodge = char_vals.sprites.dodge
 spr_attack = char_vals.sprites.attack
 spr_parry = char_vals.sprites.parry
 
+//special attack threshold
+special_meter = 0
+attacks_needed = 9
+
 dodge_number = char_vals.stats.dodges
 dodge_current = 1
 
@@ -34,7 +38,7 @@ enum player_states {
 	NONE,
 	DODGING,
 	PARRYING,
-	ATTACKING
+	LIGHT_ATTACK
 }
 
 global.player_state = player_states.NONE

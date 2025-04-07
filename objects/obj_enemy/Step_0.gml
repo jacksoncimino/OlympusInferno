@@ -5,7 +5,7 @@ if(state == EnemyStates.HIT) {
 }
 
 //If the player is attacking, dodge or parry (chance)
-if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_height) and state == EnemyStates.READY and global.player_state == player_states.ATTACKING) {
+if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_height) and state == EnemyStates.READY and global.player_state == player_states.LIGHT_ATTACK) {
 	var _chance = random(100)
 	
 	if (_chance > level * 2) {
