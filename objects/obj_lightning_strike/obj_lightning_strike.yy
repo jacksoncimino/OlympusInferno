@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lightning",
-    "path":"sprites/spr_lightning/spr_lightning.yy",
+    "name":"spr_lightning_2",
+    "path":"sprites/spr_lightning_2/spr_lightning_2.yy",
   },
   "spriteMaskId":null,
   "visible":true,

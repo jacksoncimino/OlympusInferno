@@ -68,6 +68,7 @@
     {"id":{"name":"spr_enemy_temp_move","path":"sprites/spr_enemy_temp_move/spr_enemy_temp_move.yy",},},
     {"id":{"name":"spr_enemy_temp_parry","path":"sprites/spr_enemy_temp_parry/spr_enemy_temp_parry.yy",},},
     {"id":{"name":"spr_enemy_temp","path":"sprites/spr_enemy_temp/spr_enemy_temp.yy",},},
+    {"id":{"name":"spr_lightning_2","path":"sprites/spr_lightning_2/spr_lightning_2.yy",},},
     {"id":{"name":"spr_lightning_bolt","path":"sprites/spr_lightning_bolt/spr_lightning_bolt.yy",},},
     {"id":{"name":"spr_lightning","path":"sprites/spr_lightning/spr_lightning.yy",},},
     {"id":{"name":"spr_mainmenu_anykey","path":"sprites/spr_mainmenu_anykey/spr_mainmenu_anykey.yy",},},
