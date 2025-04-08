@@ -12,7 +12,7 @@ if(room = r_ModeSelect) {
 	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or mouse_check_button_pressed(mb_left)) {
 		if(single_player = 1) {
-			room_goto(r_ModeSelect)	
+			room_goto(r_Olympus_Single)	
 		} else {
 			room_goto(r_MultiplayerSelect)	
 		}
@@ -21,6 +21,6 @@ if(room = r_ModeSelect) {
 
 if(room = r_MultiplayerSelect) {
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter)) {
-		room_goto(r_Olympus)	
+		room_goto(r_Olympus_Multi)	
 	}
 }

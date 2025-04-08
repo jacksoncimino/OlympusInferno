@@ -36,5 +36,30 @@ function get_player_values(char_name){
 				dodges: 1
 			}
 		};	
+	case obj_player1:
+		with(obj_level_controller) {
+			return get_player_values(obj_level_controller.player1)
+		}
+	case obj_player2:
+		with(obj_level_controller) {
+			return get_player_values(obj_level_controller.player2)
+		}
+	default:
+		return {
+			sprites: {
+				basic: spr_temp,
+				move: spr_temp,
+				dodge: spr_temp,
+				attack: spr_temp,
+				parry: spr_temp
+			},
+			stats: {
+				xspd_max: 5,
+				xspd_acc: 1,
+				frict: 0.5,
+				jumps: 3,
+				dodges: 1
+			}
+		};
 	}
 }

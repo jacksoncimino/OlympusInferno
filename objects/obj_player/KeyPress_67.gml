@@ -1,4 +1,5 @@
 ///@description player dodge
+/*
 if ( dodge_current > 0 ) {	
 	if (keyboard_check(vk_right) || keyboard_check(vk_left) ) {
 		dodge_current--

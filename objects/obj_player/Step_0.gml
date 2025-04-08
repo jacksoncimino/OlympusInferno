@@ -2,25 +2,25 @@
 ysp += 0.3
 
 //move right or left when arrow key is pressed
-var _rightkey = keyboard_check(vk_right)
-var _leftkey = keyboard_check(vk_left) 
+var _rightkey = keyboard_check(move_right_key)
+var _leftkey = keyboard_check(move_left_key) 
 var _move = _rightkey - _leftkey
 
 
-if (global.player_state == player_states.NONE || global.player_state == player_states.LIGHT_ATTACK) {
+if (player_state == player_states.NONE || player_state == player_states.LIGHT_ATTACK) {
 	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
     if (_move == -1) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
 	if (_move == 0) {
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
-		if (global.player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_basic}
+		if (player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_basic}
 	} else {
-		if (global.player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_move}
+		if (player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_move}
 		image_xscale = _move
 	}
 }
 
-if (global.player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
+if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
 	//create hitbox for attack
 	var hb_startX = 0
 	var hb_startY = 0
@@ -55,7 +55,7 @@ if (global.player_state == player_states.LIGHT_ATTACK || sprite_index == spr_att
 	hitBox.attacker = object_index
 	
 	if (image_index >= sprite_get_number(spr_attack)) { //#frames in sprite
-		global.player_state = player_states.NONE
+		player_state = player_states.NONE
 	}
 }
 
@@ -91,6 +91,51 @@ if(isHit) {
 	if (alarm[3] == -1) {
 		alarm[3] = game_get_speed(gamespeed_fps) * 0.7
 		image_blend = c_red
+	}
+}
+
+//dodge
+if( keyboard_check(dodge_key)) {
+	if ( dodge_current > 0 ) {	
+		if (keyboard_check(move_right_key) || keyboard_check(move_left_key) ) {
+			dodge_current--
+			player_state = player_states.DODGING
+			var _right = keyboard_check(vk_right)
+			var _left = keyboard_check(vk_left) 
+			var _moveDodge = _right - _left
+			sprite_index = spr_dodge
+			xsp = _move * max_spd * 4
+		} else if (keyboard_check(down_key)) {
+			dodge_current--
+			player_state = player_states.PARRYING
+			sprite_index = spr_parry
+		}
+		//length of dodge/parry
+		alarm[1] = 12
+	}
+}
+
+//attack
+if (keyboard_check(quick_attack_key)) {
+	if(player_state != player_states.LIGHT_ATTACK) {
+		sprite_index = spr_attack
+		image_index = 0
+		player_state = player_states.LIGHT_ATTACK
+	}
+}
+
+//special attack
+if( keyboard_check(special_attack_key)) {
+	if(special_meter > attacks_needed) {
+		special_meter = 0
+		var _bolt = instance_create_layer(x, y, "Instances", obj_lightning_bolt)
+		_bolt.speed = _bolt.spd
+		_bolt.attacker = object_index
+		if (image_xscale == 1) {
+			_bolt.direction = point_direction(x, y, x+1, y)
+		} else {
+			_bolt.direction = point_direction(x, y, x-1, y)
+		}
 	}
 }
 

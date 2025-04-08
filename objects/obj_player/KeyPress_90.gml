@@ -1,5 +1,5 @@
 /// @description special attack
-
+/*
 if(special_meter > attacks_needed) {
 	special_meter = 0
 	var _bolt = instance_create_layer(x, y, "Instances", obj_lightning_bolt)

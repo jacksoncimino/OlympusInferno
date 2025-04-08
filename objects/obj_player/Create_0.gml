@@ -41,4 +41,14 @@ enum player_states {
 	LIGHT_ATTACK
 }
 
-global.player_state = player_states.NONE
+player_state = player_states.NONE
+
+//controls for player
+move_left_key = vk_left
+move_right_key = vk_right
+jump_key = vk_up
+down_key = vk_down
+dodge_key = ord("C")
+quick_attack_key = ord("X")
+special_attack_key = ord("Z")
+
