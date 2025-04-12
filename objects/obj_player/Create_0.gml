@@ -10,6 +10,7 @@ acceleration = char_vals.stats.xspd_acc
 frict = char_vals.stats.frict
 
 isHit = false
+onFloating = false
 
 jump_number = char_vals.stats.jumps
 jump_current = 0
@@ -51,4 +52,6 @@ down_key = vk_down
 dodge_key = ord("C")
 quick_attack_key = ord("X")
 special_attack_key = ord("Z")
+
+life = 3
 

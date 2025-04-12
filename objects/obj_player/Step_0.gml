@@ -82,8 +82,11 @@ if(wall_direction != 0) {
 
 //respawn
 if(y > room_height + 500) {
-	x = startX
-	y = startY
+	life -= 1
+	if(life > 0) {
+		x = startX
+		y = startY
+	}
 }
 
 //combat

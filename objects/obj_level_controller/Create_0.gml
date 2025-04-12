@@ -2,6 +2,8 @@ player1 = ""
 player2 = ""
 multiPlayer = true
 
+gameOver = false
+
 if (room == r_Olympus_Multi) {
 	multiPlayer = true
 	

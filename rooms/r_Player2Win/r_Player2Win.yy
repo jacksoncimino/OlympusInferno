@@ -1,28 +1,27 @@
 {
   "$GMRoom":"v1",
-  "%Name":"r_ModeSelect",
+  "%Name":"r_Player2Win",
   "creationCodeFile":"",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_433BBF55","path":"rooms/r_ModeSelect/r_ModeSelect.yy",},
-    {"name":"inst_6998CF36","path":"rooms/r_ModeSelect/r_ModeSelect.yy",},
+    {"name":"inst_6903321F","path":"rooms/r_Player2Win/r_Player2Win.yy",},
+    {"name":"inst_41B67C4A","path":"rooms/r_Player2Win/r_Player2Win.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRAssetLayer":"","%Name":"Assets_1","assets":[
-        {"$GMRSpriteGraphic":"","%Name":"graphic_D94469A","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_D94469A","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_mode_title","path":"sprites/spr_mode_title/spr_mode_title.yy",},"x":320.0,"y":0.0,},
-        {"$GMRSpriteGraphic":"","%Name":"graphic_24F5171D","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_24F5171D","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.56231004,"scaleY":0.5704698,"spriteId":{"name":"spr_mode_single","path":"sprites/spr_mode_single/spr_mode_single.yy",},"x":512.0,"y":448.0,},
-        {"$GMRSpriteGraphic":"","%Name":"graphic_2305C7AA","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_2305C7AA","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":0.59874606,"scaleY":0.5704698,"spriteId":{"name":"spr_mode_multi","path":"sprites/spr_mode_multi/spr_mode_multi.yy",},"x":512.0,"y":256.0,},
+        {"$GMRSpriteGraphic":"","%Name":"graphic_7F122A33","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_7F122A33","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_player2Win","path":"sprites/spr_player2Win/spr_player2Win.yy",},"x":320.0,"y":128.0,},
+        {"$GMRSpriteGraphic":"","%Name":"graphic_5298658C","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"graphic_5298658C","resourceType":"GMRSpriteGraphic","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_continue","path":"sprites/spr_continue/spr_continue.yy",},"x":448.0,"y":480.0,},
       ],"depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Assets_1","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_433BBF55","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_433BBF55","objectId":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":-96.0,},
-        {"$GMRInstance":"v1","%Name":"inst_6998CF36","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6998CF36","objectId":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":448.0,"y":260.0,},
+        {"$GMRInstance":"v1","%Name":"inst_6903321F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6903321F","objectId":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":512.0,},
+        {"$GMRInstance":"v1","%Name":"inst_41B67C4A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_41B67C4A","objectId":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1248.0,"y":192.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_background_city","path":"sprites/spr_background_city/spr_background_city.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
-  "name":"r_ModeSelect",
+  "name":"r_Player2Win",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

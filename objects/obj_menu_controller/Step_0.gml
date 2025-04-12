@@ -14,7 +14,7 @@ if(room = r_ModeSelect) {
 		if(single_player = 1) {
 			room_goto(r_Olympus_Single)	
 		} else {
-			room_goto(r_MultiplayerSelect)	
+			room_goto(r_MultiplayerSelect)
 		}
 	}
 }
@@ -22,5 +22,12 @@ if(room = r_ModeSelect) {
 if(room = r_MultiplayerSelect) {
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter)) {
 		room_goto(r_Olympus_Multi)	
+	}
+}
+
+if(room = r_Player1Win or room = r_Player2Win) {
+	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter)) {
+		single_player = -1
+		room_goto(r_MainMenu)
 	}
 }
