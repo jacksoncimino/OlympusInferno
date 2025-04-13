@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cyclops_attack_1",
-    "path":"sprites/spr_cyclops_attack_1/spr_cyclops_attack_1.yy",
+    "name":"spr_cyclops_run",
+    "path":"sprites/spr_cyclops_run/spr_cyclops_run.yy",
   },
   "spriteMaskId":null,
   "visible":true,

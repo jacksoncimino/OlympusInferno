@@ -22,11 +22,11 @@ function get_player_values(char_name){
 	case obj_cyclops:
 		return {
 			sprites: {
-				basic: spr_enemy_cyclops,
-				move: spr_enemy_cyclops,
-				dodge: spr_enemy_cyclops,
-				attack: spr_enemy_cyclops,
-				parry: spr_enemy_cyclops
+				basic: spr_cyclops_idle,
+				move: spr_cyclops_idle,
+				dodge: spr_cyclops_idle,
+				attack: spr_cyclops_idle,
+				parry: spr_cyclops_idle
 			},
 			stats: {
 				xspd_max: 5,
