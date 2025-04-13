@@ -93,6 +93,7 @@
     {"id":{"name":"spr_kronos_frontlash","path":"sprites/spr_kronos_frontlash/spr_kronos_frontlash.yy",},},
     {"id":{"name":"spr_kronos_idle","path":"sprites/spr_kronos_idle/spr_kronos_idle.yy",},},
     {"id":{"name":"spr_kronos_jump","path":"sprites/spr_kronos_jump/spr_kronos_jump.yy",},},
+    {"id":{"name":"spr_kronos_run","path":"sprites/spr_kronos_run/spr_kronos_run.yy",},},
     {"id":{"name":"spr_kronos_up_attack","path":"sprites/spr_kronos_up_attack/spr_kronos_up_attack.yy",},},
     {"id":{"name":"spr_lightning_2","path":"sprites/spr_lightning_2/spr_lightning_2.yy",},},
     {"id":{"name":"spr_lightning_bolt","path":"sprites/spr_lightning_bolt/spr_lightning_bolt.yy",},},
