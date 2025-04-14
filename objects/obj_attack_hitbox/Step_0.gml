@@ -1,5 +1,6 @@
 var instGrab_enemy = collision_rectangle(x+x1, y+y1, x+x2, y+y2, obj_enemy, 0, 0)
-var instGrab_player = collision_rectangle(x+x1, y+y1, x+x2, y+y2, obj_player, 0, 0)
+var players = ds_list_create();
+var num_players = collision_rectangle_list(x+x1, y+y1, x+x2, y+y2, obj_player,  0, 0, players, 0)
 
 if(instGrab_enemy != noone) {
 	if(!(instGrab_enemy.state == EnemyStates.HIT)) {
@@ -7,14 +8,37 @@ if(instGrab_enemy != noone) {
 		instGrab_enemy.state = EnemyStates.HIT
 		instGrab_enemy.image_blend = c_red
 		attacker.special_meter++
+		
+		//knockback
+		if(instGrab_enemy.x > x) {
+			instGrab_enemy.xsp = knockback * instGrab_enemy.dmg
+		} else {
+			instGrab_enemy.xsp = -knockback * instGrab_enemy.dmg
+		}
+		instGrab_enemy.ysp = -1 * instGrab_enemy.dmg / 2
 	}
 }
 
-if(instGrab_player != noone and instGrab_player.id != attacker.id) {
-	if(!(instGrab_player.isHit)) {
-		instGrab_player.hp --
-		instGrab_player.isHit = true
-		instGrab_player.image_blend = c_red
-		attacker.special_meter++
-	}
+if(num_players > 0) {
+	for (var i = 0; i < num_players; ++i;)
+    {
+		var instGrab_player = players[| i]
+		if (instGrab_player.id != attacker) {
+			if(!(instGrab_player.isHit)) {
+				instGrab_player.hp ++
+				instGrab_player.isHit = true
+				instGrab_player.image_blend = c_red
+				attacker.special_meter++
+		
+				//knockback
+				if ( instGrab_player.x > x) {
+					instGrab_player.xsp = knockback * instGrab_player.hp
+				} else {
+					instGrab_player.xsp = -knockback * instGrab_player.hp
+				}
+				instGrab_player.ysp = -1 * instGrab_player.hp / 2
+			}
+		}
+    }
 }
+

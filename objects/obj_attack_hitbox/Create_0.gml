@@ -5,4 +5,6 @@ y2 = 0
 
 attacker = obj_player
 
+knockback = 2
+
 alarm[0] = 2 //time for hitbox to linger
