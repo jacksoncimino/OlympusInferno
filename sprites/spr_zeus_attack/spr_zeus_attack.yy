@@ -17,7 +17,6 @@
     {"$GMSpriteFrame":"","%Name":"35735bb7-bf32-4416-a8fa-80ab213ea8da","name":"35735bb7-bf32-4416-a8fa-80ab213ea8da","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"de6c5be5-d7bc-4e4e-a8ac-fa30d4b5e5c9","name":"de6c5be5-d7bc-4e4e-a8ac-fa30d4b5e5c9","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"019c079b-65c7-4335-98d7-4999a5e01250","name":"019c079b-65c7-4335-98d7-4999a5e01250","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"f066ca32-b28c-4487-bd5d-8ab865138c05","name":"f066ca32-b28c-4487-bd5d-8ab865138c05","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"76b5eb3c-4ec1-41e3-a035-67438e083bff","name":"76b5eb3c-4ec1-41e3-a035-67438e083bff","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -74,7 +73,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":7.0,
+    "length":6.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -109,11 +108,8 @@
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"019c079b-65c7-4335-98d7-4999a5e01250","path":"sprites/spr_zeus_attack/spr_zeus_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"c393559c-d80a-49f0-8a9f-4deb4a65503f","IsCreationKey":false,"Key":4.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f066ca32-b28c-4487-bd5d-8ab865138c05","path":"sprites/spr_zeus_attack/spr_zeus_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"a92a33fd-1d0d-4a59-afb3-ba3a4177cda8","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"76b5eb3c-4ec1-41e3-a035-67438e083bff","path":"sprites/spr_zeus_attack/spr_zeus_attack.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"33e9b8eb-50ee-4dff-9d15-9fd88590d383","IsCreationKey":false,"Key":6.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"33e9b8eb-50ee-4dff-9d15-9fd88590d383","IsCreationKey":false,"Key":5.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

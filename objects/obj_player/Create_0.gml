@@ -20,7 +20,7 @@ spr_move = char_vals.sprites.move
 spr_basic = char_vals.sprites.basic
 spr_dodge = char_vals.sprites.dodge
 spr_attack = char_vals.sprites.attack
-//spr_heavy_attack = char_vals.sprites.heavy_attack
+spr_heavy_attack = char_vals.sprites.heavy_attack
 spr_parry = char_vals.sprites.parry
 spr_jump = char_vals.sprites.jump
 
@@ -42,7 +42,7 @@ enum player_states {
 	DODGING,
 	PARRYING,
 	LIGHT_ATTACK,
-	//HEAVY_ATTACK,
+	HEAVY_ATTACK,
 	JUMPING
 }
 

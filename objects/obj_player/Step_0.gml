@@ -7,20 +7,21 @@ var _leftkey = keyboard_check(move_left_key)
 var _move = _rightkey - _leftkey
 
 
-if (player_state == player_states.NONE || player_state == player_states.LIGHT_ATTACK) {
+if (player_state == player_states.NONE || player_state == player_states.LIGHT_ATTACK || player_state == player_states.HEAVY_ATTACK) {
 	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
     if (_move == -1) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
 	if (_move == 0) {
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
-		if (player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_basic}
+		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK) {sprite_index = spr_basic}
 	} else {
-		if (player_state != player_states.LIGHT_ATTACK) {sprite_index = spr_move}
+		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK ) {sprite_index = spr_move}
 		image_xscale = _move
 	}
 }
 
-if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
+if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack) 
+and image_index >= 1 and image_index <= 5{
 	//create hitbox for attack
 	var hb_startX = 0
 	var hb_startY = 0
@@ -53,15 +54,11 @@ if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
 	hitBox.y1 = rect_y1
 	hitBox.y2 = rect_y2
 	hitBox.attacker = id
-	
-	if (image_index >= sprite_get_number(spr_attack)) { //#frames in sprite
-		player_state = player_states.NONE
-	}
 }
 
 //heavy attack hitbox
-/*
-if (player_state == player_states.HEAVY_ATTACK || sprite_index == spr_heavy_attack ) {
+if (player_state == player_states.HEAVY_ATTACK || sprite_index == spr_heavy_attack ) 
+and image_index >= 7 and image_index <= 9{
 	//create hitbox for attack
 	var hb_startX = 0
 	var hb_startY = 0
@@ -94,12 +91,7 @@ if (player_state == player_states.HEAVY_ATTACK || sprite_index == spr_heavy_atta
 	hitBox.y1 = rect_y1
 	hitBox.y2 = rect_y2
 	hitBox.attacker = id
-	
-	if (image_index >= sprite_get_number(spr_heavy_attack)) { //#frames in sprite
-		player_state = player_states.NONE
-	}
 }
-*/
 
 //reset jumps and dodge
 if place_meeting(x, y+ysp, obj_platform) {
@@ -107,7 +99,6 @@ if place_meeting(x, y+ysp, obj_platform) {
         jump_current = jump_number;
     }
     ysp = 0;
-	sprite_index = spr_basic
 }
 //wall hang/ jump
 if place_meeting(x+xsp, y, obj_platform) || place_meeting(x-xsp, y, obj_platform) {
@@ -171,7 +162,6 @@ if (keyboard_check(quick_attack_key)) {
 }
 
 //heavy attack
-/*
 if (keyboard_check(heavy_attack_key)) {
 	if(player_state != player_states.HEAVY_ATTACK) {
 		sprite_index = spr_heavy_attack
@@ -179,7 +169,6 @@ if (keyboard_check(heavy_attack_key)) {
 		player_state = player_states.HEAVY_ATTACK
 	}
 }
-*/
 
 //special attack
 if( keyboard_check(special_attack_key)) {
