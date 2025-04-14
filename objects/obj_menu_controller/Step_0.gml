@@ -25,7 +25,7 @@ if(room = r_MultiplayerSelect) {
 	}
 }
 
-if(room = r_Player1Win or room = r_Player2Win) {
+if(room = r_Player1Win or room = r_Player2Win or room = r_SinglePlayer_Win or room = r_SinglePlayer_Lose) {
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter)) {
 		single_player = -1
 		room_goto(r_MainMenu)
