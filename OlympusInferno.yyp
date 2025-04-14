@@ -68,6 +68,7 @@
     {"id":{"name":"r_SinglePlayer_Win","path":"rooms/r_SinglePlayer_Win/r_SinglePlayer_Win.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"get_player_values","path":"scripts/get_player_values/get_player_values.yy",},},
+    {"id":{"name":"OI_simplebackground","path":"sounds/OI_simplebackground/OI_simplebackground.yy",},},
     {"id":{"name":"spr_background_city","path":"sprites/spr_background_city/spr_background_city.yy",},},
     {"id":{"name":"spr_background_mainmenu","path":"sprites/spr_background_mainmenu/spr_background_mainmenu.yy",},},
     {"id":{"name":"spr_background_snowypeaks","path":"sprites/spr_background_snowypeaks/spr_background_snowypeaks.yy",},},
