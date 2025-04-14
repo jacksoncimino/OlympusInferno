@@ -1,3 +1,13 @@
+ysp += 0.3
+
+//movement friction
+if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
+if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
+
+if place_meeting(x, y+ysp, obj_platform) {
+    ysp = 0;
+}
+
 if(state == EnemyStates.HIT) {
 	if(alarm[2] == -1) {
 		alarm[2] = game_get_speed(gamespeed_fps) * 0.7	
@@ -28,3 +38,5 @@ if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_heig
 	obj_cyclops_atk.image_xscale = image_xscale
 	alarm[0] = game_get_speed(gamespeed_fps) * 2 //attack cooldown
 }
+
+move_and_collide(xsp, ysp, obj_platform)

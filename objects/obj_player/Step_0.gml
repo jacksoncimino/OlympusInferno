@@ -30,20 +30,20 @@ if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
 	var rect_y2 = 0
 	
 	if(image_xscale == 1) {
-		hb_startX = 15
+		hb_startX = -10
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = 30
-		rect_y1 = 10
+		rect_x2 = 60
+		rect_y1 = 20
 		rect_y2 = -10
 	}
 	
 	if (image_xscale == -1) {
-		hb_startX = -15
+		hb_startX = 10
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = -30
-		rect_y1 = 10
+		rect_x2 = -60
+		rect_y1 = 20
 		rect_y2 = -10
 	}
 	
@@ -52,7 +52,7 @@ if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
 	hitBox.x2 = rect_x2
 	hitBox.y1 = rect_y1
 	hitBox.y2 = rect_y2
-	hitBox.attacker = object_index
+	hitBox.attacker = id
 	
 	if (image_index >= sprite_get_number(spr_attack)) { //#frames in sprite
 		player_state = player_states.NONE
