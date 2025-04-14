@@ -9,7 +9,9 @@ function get_player_values(char_name){
 				move: spr_zeus_walk,
 				dodge: spr_zeus_idle,
 				attack: spr_zeus_attack,
-				parry: spr_zeus_idle
+				heavy_attack: spr_zeus_backhand_attack,
+				parry: spr_zeus_idle,
+				jump: spr_zeus_jump
 			},
 			stats: {
 				xspd_max: 5,
@@ -26,7 +28,9 @@ function get_player_values(char_name){
 				move: spr_cyclops_idle,
 				dodge: spr_cyclops_idle,
 				attack: spr_cyclops_idle,
-				parry: spr_cyclops_idle
+				heavy_attack: spr_cyclops_idle,
+				parry: spr_cyclops_idle,
+				jump: spr_cyclops_idle
 			},
 			stats: {
 				xspd_max: 5,
@@ -51,7 +55,9 @@ function get_player_values(char_name){
 				move: spr_temp,
 				dodge: spr_temp,
 				attack: spr_temp,
-				parry: spr_temp
+				heavy_attack: spr_temp,
+				parry: spr_temp,
+				jump: spr_temp
 			},
 			stats: {
 				xspd_max: 5,

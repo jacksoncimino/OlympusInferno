@@ -59,12 +59,55 @@ if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ) {
 	}
 }
 
+//heavy attack hitbox
+/*
+if (player_state == player_states.HEAVY_ATTACK || sprite_index == spr_heavy_attack ) {
+	//create hitbox for attack
+	var hb_startX = 0
+	var hb_startY = 0
+	var rect_x1 = 0
+	var rect_x2 = 0
+	var rect_y1 = 0
+	var rect_y2 = 0
+	
+	if(image_xscale == 1) {
+		hb_startX = -10
+		hb_startY = 0
+		rect_x1 = 0
+		rect_x2 = 60
+		rect_y1 = 20
+		rect_y2 = -10
+	}
+	
+	if (image_xscale == -1) {
+		hb_startX = 10
+		hb_startY = 0
+		rect_x1 = 0
+		rect_x2 = -60
+		rect_y1 = 20
+		rect_y2 = -10
+	}
+	
+	var hitBox = instance_create_layer(x + hb_startX, y + hb_startY, "Instances", obj_attack_hitbox)
+	hitBox.x1 = rect_x1
+	hitBox.x2 = rect_x2
+	hitBox.y1 = rect_y1
+	hitBox.y2 = rect_y2
+	hitBox.attacker = id
+	
+	if (image_index >= sprite_get_number(spr_heavy_attack)) { //#frames in sprite
+		player_state = player_states.NONE
+	}
+}
+*/
+
 //reset jumps and dodge
 if place_meeting(x, y+ysp, obj_platform) {
 	if (ysp > 0) {
         jump_current = jump_number;
     }
     ysp = 0;
+	sprite_index = spr_basic
 }
 //wall hang/ jump
 if place_meeting(x+xsp, y, obj_platform) || place_meeting(x-xsp, y, obj_platform) {
@@ -126,6 +169,17 @@ if (keyboard_check(quick_attack_key)) {
 		player_state = player_states.LIGHT_ATTACK
 	}
 }
+
+//heavy attack
+/*
+if (keyboard_check(heavy_attack_key)) {
+	if(player_state != player_states.HEAVY_ATTACK) {
+		sprite_index = spr_heavy_attack
+		image_index = 0
+		player_state = player_states.HEAVY_ATTACK
+	}
+}
+*/
 
 //special attack
 if( keyboard_check(special_attack_key)) {
