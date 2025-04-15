@@ -8,8 +8,8 @@ var _move = _rightkey - _leftkey
 
 
 if (player_state == player_states.NONE || player_state == player_states.LIGHT_ATTACK || player_state == player_states.HEAVY_ATTACK) {
-	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
-    if (_move == -1) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
+	if (_move == 1 and xsp <= max_spd) xsp = min(max_spd, xsp + acceleration); //accelerate going right
+    if (_move == -1 and -xsp <= max_spd) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
 	if (_move == 0) {
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
@@ -160,7 +160,7 @@ if( keyboard_check(dodge_key)) {
 
 //attack
 if (keyboard_check(quick_attack_key) and on_wall == false) {
-	if(player_state != player_states.LIGHT_ATTACK) {
+	if(player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK) {
 		if(combo_active) {sprite_index = spr_attack2}
 		else {sprite_index = spr_attack}
 		
@@ -171,7 +171,7 @@ if (keyboard_check(quick_attack_key) and on_wall == false) {
 
 //heavy attack
 if (keyboard_check(heavy_attack_key) and on_wall == false) {
-	if(player_state != player_states.HEAVY_ATTACK) {
+	if(player_state != player_states.HEAVY_ATTACK and player_state != player_states.LIGHT_ATTACK) {
 		sprite_index = spr_heavy_attack
 		image_index = 0
 		player_state = player_states.HEAVY_ATTACK
