@@ -26,6 +26,7 @@ spr_attack2 = char_vals.sprites.attack2
 spr_heavy_attack = char_vals.sprites.heavy_attack
 spr_parry = char_vals.sprites.parry
 spr_jump = char_vals.sprites.jump
+spr_special = char_vals.sprites.special
 
 combo_active = false
 

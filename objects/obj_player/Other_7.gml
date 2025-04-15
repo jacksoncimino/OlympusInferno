@@ -11,3 +11,7 @@ if (player_state == player_states.LIGHT_ATTACK || sprite_index == spr_attack ||
 	player_state = player_states.NONE
 	
 }
+
+if (sprite_index == spr_jump || sprite_index == spr_special) {
+	sprite_index = spr_basic 
+}

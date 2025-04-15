@@ -12,13 +12,14 @@ function get_player_values(char_name){
 				attack2: spr_zeus_attack2,
 				heavy_attack: spr_zeus_backhand_attack,
 				parry: spr_zeus_idle,
-				jump: spr_zeus_jump
+				jump: spr_zeus_jump,
+				special: spr_zeus_special
 			},
 			stats: {
 				xspd_max: 5,
 				xspd_acc: 1,
 				frict: 0.5,
-				jumps: 2,
+				jumps: 3,
 				dodges: 1,
 				name: "Zeus"
 			}
@@ -33,13 +34,14 @@ function get_player_values(char_name){
 				attack2: spr_kronos_up_attack,
 				heavy_attack: spr_kronos_backlash,
 				parry: spr_kronos_idle,
-				jump: spr_kronos_jump
+				jump: spr_kronos_jump,
+				special: spr_kronos_special
 			},
 			stats: {
 				xspd_max: 5,
 				xspd_acc: 1,
 				frict: 0.5,
-				jumps: 2,
+				jumps: 3,
 				dodges: 1,
 				name: "Kronos"
 			}
@@ -54,13 +56,14 @@ function get_player_values(char_name){
 				attack2: spr_cyclops_idle,
 				heavy_attack: spr_cyclops_idle,
 				parry: spr_cyclops_idle,
-				jump: spr_cyclops_idle
+				jump: spr_cyclops_idle,
+				special: spr_cyclops_idle
 			},
 			stats: {
 				xspd_max: 5,
 				xspd_acc: 1,
 				frict: 0.5,
-				jumps: 2,
+				jumps: 3,
 				dodges: 1,
 				name: "Cyclops"
 			}
@@ -83,7 +86,8 @@ function get_player_values(char_name){
 				attack2: spr_temp,
 				heavy_attack: spr_temp,
 				parry: spr_temp,
-				jump: spr_temp
+				jump: spr_temp,
+				special: spr_temp
 			},
 			stats: {
 				xspd_max: 5,

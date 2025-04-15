@@ -13,9 +13,11 @@ if (player_state == player_states.NONE || player_state == player_states.LIGHT_AT
 	if (_move == 0) {
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
-		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK) {sprite_index = spr_basic}
+		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK 
+		and sprite_index != spr_jump and sprite_index != spr_special) {sprite_index = spr_basic}
 	} else {
-		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK ) {sprite_index = spr_move}
+		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK 
+		and sprite_index != spr_jump and sprite_index != spr_special) {sprite_index = spr_move}
 		image_xscale = _move
 	}
 }
@@ -205,6 +207,7 @@ if( keyboard_check(special_attack_key)) {
 			}
 		}
 	}
+	sprite_index = spr_special
 }
 
 //allow player to stand on boxes

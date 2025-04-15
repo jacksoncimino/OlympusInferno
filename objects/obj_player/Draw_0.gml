@@ -19,3 +19,7 @@ draw_set_font(fnt_attack_meter)
 draw_set_color(c_black)
 if(special_meter > attacks_needed) {draw_set_color(c_green)}
 draw_text(drawX, room_height - 125, "Special Attack: " + string(special_meter))
+
+draw_set_color(c_black)
+draw_text(drawX, room_height - 85, "Lives: " + string(life))
+

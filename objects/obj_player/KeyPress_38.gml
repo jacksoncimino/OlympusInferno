@@ -12,5 +12,5 @@ if (jump_current > 0) {
 		alarm[0] = wall_jump_speed
 		jump_current--
 	}
-	image_index = spr_jump
+	sprite_index = spr_jump
 }
