@@ -21,10 +21,58 @@ if(room = r_ModeSelect) {
 
 if(room = r_MultiplayerSelect) {
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter)) {
-		room_goto(r_Olympus_Multi)	
+		room_goto(r_MapSelect)	
 	}
 	if(keyboard_check_pressed(vk_backspace) or keyboard_check_pressed(vk_escape)) {
 		room_goto(r_ModeSelect)	
+	}
+}
+
+if(room = r_MapSelect) {
+	if(keyboard_check_pressed(vk_right)) {
+		map += 1
+	} else if (keyboard_check_pressed(vk_left)) {
+		map -= 1	
+	}
+	
+	if(map > 3) {
+		map = 0	
+	} else if(map < 0) {
+		map = 3
+	}
+	
+	if(keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_down)) {
+		if(map < 2) {
+			map += 2
+		} else {
+			map -= 2
+		}
+	}
+	
+	if(map == 0) {
+		obj_menu_arrow.x = 96
+		obj_menu_arrow.y = 160
+	} else if (map == 1) {
+		obj_menu_arrow.x = 736
+		obj_menu_arrow.y = 160
+	} else if (map == 2) {
+		obj_menu_arrow.x = 96
+		obj_menu_arrow.y = 512
+	} else if (map == 3) {
+		obj_menu_arrow.x = 736
+		obj_menu_arrow.y = 512
+	}
+	
+	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter)) {
+		if(map == 0) {
+			room_goto(r_Olympus_Multi)
+		} else if (map == 1) {
+			room_goto(r_Underworld_Multi)
+		} else if (map == 2) {
+			map = 0
+		} else if (map == 3) {
+			map = 0	
+		}
 	}
 }
 

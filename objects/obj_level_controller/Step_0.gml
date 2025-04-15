@@ -34,7 +34,11 @@ if(multiPlayer) {
 			audio_stop_sound(OI_simplebackground)
 			instance_create_layer((room_width / 2), 75, "Instances", obj_gameover1)
 			instance_create_layer((room_width / 2), 175, "Instances", obj_gameover2)
-			alarm[3] = game_get_speed(gamespeed_fps) * 3
+			if(room == r_Olympus_Single) {
+				alarm[4] = game_get_speed(gamespeed_fps) * 3
+			} else if (room == r_Underworld_Single) {
+				alarm[3] = game_get_speed(gamespeed_fps) * 3
+			}
 			gameOver = true
 		}
 	}
