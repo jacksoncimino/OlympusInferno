@@ -1,7 +1,7 @@
 spd = 10
 
 atk = 1
-
+damage = 5
 attacker = obj_player
 
 effect = obj_lightning_bolt
