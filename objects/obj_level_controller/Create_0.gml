@@ -8,7 +8,7 @@ if (room == r_Olympus_Multi) {
 	multiPlayer = true
 	
 	player1 = obj_Zeus
-	player2 = obj_Zeus
+	player2 = obj_Kronos
 	
 	//set player keys
 	/*

@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_zeus_idle",
   "bboxMode":2,
-  "bbox_bottom":52,
+  "bbox_bottom":50,
   "bbox_left":20,
   "bbox_right":43,
   "bbox_top":2,

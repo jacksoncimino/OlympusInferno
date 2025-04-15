@@ -3,6 +3,8 @@ char_vals = get_player_values(object_index);
 startX = x
 startY = y
 
+name = char_vals.stats.name
+
 xsp = 0
 ysp = 0
 max_spd = char_vals.stats.xspd_max
@@ -20,9 +22,12 @@ spr_move = char_vals.sprites.move
 spr_basic = char_vals.sprites.basic
 spr_dodge = char_vals.sprites.dodge
 spr_attack = char_vals.sprites.attack
+spr_attack2 = char_vals.sprites.attack2
 spr_heavy_attack = char_vals.sprites.heavy_attack
 spr_parry = char_vals.sprites.parry
 spr_jump = char_vals.sprites.jump
+
+combo_active = false
 
 //special attack threshold
 special_meter = 0

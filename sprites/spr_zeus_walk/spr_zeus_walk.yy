@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_zeus_walk",
   "bboxMode":2,
-  "bbox_bottom":52,
+  "bbox_bottom":50,
   "bbox_left":19,
   "bbox_right":42,
   "bbox_top":2,

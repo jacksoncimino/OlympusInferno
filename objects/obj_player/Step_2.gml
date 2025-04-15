@@ -3,7 +3,7 @@ var _plat = instance_place(x, y+ysp, obj_floating_platform)
 if(_plat != noone) {
 	if bbox_bottom + ysp < _plat.bbox_bottom
 	&& ysp >= 0
-	&& !keyboard_check(vk_down)
+	&& !keyboard_check(down_key)
 	{
 	//stop moving or snap player to other.bbox_top eg.
 	y = _plat.bbox_top - (bbox_bottom - y)

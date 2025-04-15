@@ -54,6 +54,8 @@ and image_index >= 1 and image_index <= 5{
 	hitBox.y1 = rect_y1
 	hitBox.y2 = rect_y2
 	hitBox.attacker = id
+	if(sprite_index == spr_attack) {hitBox.attack_type = "light"}
+	else {hitBox.attack_type = "heavy"}
 }
 
 //heavy attack hitbox
@@ -91,6 +93,7 @@ and image_index >= 7 and image_index <= 9{
 	hitBox.y1 = rect_y1
 	hitBox.y2 = rect_y2
 	hitBox.attacker = id
+	hitBox.attack_type = "heavy"
 }
 
 //reset jumps and dodge
@@ -120,6 +123,7 @@ if(y > room_height + 500) {
 	if(life > 0) {
 		x = startX
 		y = startY
+		hp = 0
 	}
 }
 
@@ -153,16 +157,18 @@ if( keyboard_check(dodge_key)) {
 }
 
 //attack
-if (keyboard_check(quick_attack_key)) {
+if (keyboard_check(quick_attack_key) and on_wall == false) {
 	if(player_state != player_states.LIGHT_ATTACK) {
-		sprite_index = spr_attack
+		if(combo_active) {sprite_index = spr_attack2}
+		else {sprite_index = spr_attack}
+		
 		image_index = 0
 		player_state = player_states.LIGHT_ATTACK
 	}
 }
 
 //heavy attack
-if (keyboard_check(heavy_attack_key)) {
+if (keyboard_check(heavy_attack_key) and on_wall == false) {
 	if(player_state != player_states.HEAVY_ATTACK) {
 		sprite_index = spr_heavy_attack
 		image_index = 0
@@ -174,13 +180,29 @@ if (keyboard_check(heavy_attack_key)) {
 if( keyboard_check(special_attack_key)) {
 	if(special_meter > attacks_needed) {
 		special_meter = 0
-		var _bolt = instance_create_layer(x, y, "Instances", obj_lightning_bolt)
-		_bolt.speed = _bolt.spd
-		_bolt.attacker = object_index
-		if (image_xscale == 1) {
-			_bolt.direction = point_direction(x, y, x+1, y)
-		} else {
-			_bolt.direction = point_direction(x, y, x-1, y)
+		
+		
+		if (name == "Zeus"){
+			var _bolt = instance_create_layer(x, y, "Instances", obj_lightning_bolt)
+			_bolt.speed = _bolt.spd
+			_bolt.attacker = object_index
+			if (image_xscale == 1) {
+				_bolt.direction = point_direction(x, y, x+1, y)
+			} else {
+				_bolt.direction = point_direction(x, y, x-1, y)
+			}
+		} else if (name == "Kronos") {
+			var _fireball = instance_create_layer(x, y, "Instances", obj_fireball)
+			_fireball.image_xscale = 0.25
+			_fireball.image_yscale = 0.25
+			_fireball.speed = _fireball.spd
+			_fireball.attacker = object_index
+			if (image_xscale == 1) {
+				_fireball.direction = point_direction(x, y, x+1, y)
+			} else {
+				_fireball.image_xscale = -0.25
+				_fireball.direction = point_direction(x, y, x-1, y)
+			}
 		}
 	}
 }

@@ -11,11 +11,23 @@ if(instGrab_enemy != noone) {
 		
 		//knockback
 		if(instGrab_enemy.x > x) {
-			instGrab_enemy.xsp = knockback * instGrab_enemy.dmg
+			if(attack_type == "heavy") {
+				instGrab_enemy.xsp = knockback * instGrab_enemy.dmg
+			} else if (attack_type == "light") {
+				instGrab_enemy.xsp = light_attack_spd
+			}
 		} else {
-			instGrab_enemy.xsp = -knockback * instGrab_enemy.dmg
+			if(attack_type == "heavy") {
+				instGrab_enemy.xsp = -knockback * instGrab_enemy.dmg
+			} else if (attack_type == "light") {
+				instGrab_enemy.xsp = -light_attack_spd
+			}
 		}
-		instGrab_enemy.ysp = -1 * instGrab_enemy.dmg / 2
+		if(attack_type == "heavy") {
+			instGrab_enemy.ysp = -1 * instGrab_enemy.dmg / 2
+		} else if (attack_type == "light") {
+			instGrab_enemy.ysp = -1
+		}
 	}
 }
 
@@ -30,13 +42,25 @@ if(num_players > 0) {
 				instGrab_player.image_blend = c_red
 				attacker.special_meter++
 		
-				//knockback
-				if ( instGrab_player.x > x) {
-					instGrab_player.xsp = knockback * instGrab_player.hp
+				if(instGrab_player.x > x) {
+					if(attack_type == "heavy") {
+						instGrab_player.xsp = knockback * instGrab_player.hp
+					} else if (attack_type == "light") {
+						instGrab_player.xsp = light_attack_spd
+					}
 				} else {
-					instGrab_player.xsp = -knockback * instGrab_player.hp
+					if(attack_type == "heavy") {
+						instGrab_player.xsp = -knockback * instGrab_player.hp
+					} else if (attack_type == "light") {
+						instGrab_player.xsp = -light_attack_spd
+					}
 				}
-				instGrab_player.ysp = -1 * instGrab_player.hp / 2
+				if(attack_type == "heavy") {
+					instGrab_player.hp ++
+					instGrab_player.ysp = -1 * instGrab_player.hp / 2
+				} else if (attack_type == "light") {
+					instGrab_player.ysp = -1
+				}
 			}
 		}
     }

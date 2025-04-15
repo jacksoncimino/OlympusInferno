@@ -39,4 +39,12 @@ if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_heig
 	alarm[0] = game_get_speed(gamespeed_fps) * 2 //attack cooldown
 }
 
+if(y > room_height + 500) {
+	life -= 1
+	if(life > 0) {
+		x = startX
+		y = startY
+	}
+}
+
 move_and_collide(xsp, ysp, obj_platform)

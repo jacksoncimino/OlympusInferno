@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_zeus_attack",
   "bboxMode":2,
-  "bbox_bottom":52,
+  "bbox_bottom":50,
   "bbox_left":46,
   "bbox_right":80,
   "bbox_top":3,
