@@ -3,6 +3,8 @@ char_vals = get_player_values(object_index);
 startX = x
 startY = y
 
+jumping = false
+
 name = char_vals.stats.name
 
 xsp = 0

@@ -4,8 +4,29 @@ ysp += 0.3
 //move right or left when arrow key is pressed
 var _rightkey = keyboard_check(move_right_key)
 var _leftkey = keyboard_check(move_left_key) 
+var _dodgekey = keyboard_check(dodge_key)
+var _downkey = keyboard_check(down_key)
+var _quickattackkey = keyboard_check(quick_attack_key)
+var _heavyattackkey = keyboard_check(heavy_attack_key)
+var _specialattackkey = keyboard_check(special_attack_key)
+var _jumpkey = keyboard_check_pressed(jump_key)
+
 var _move = _rightkey - _leftkey
 
+if(object_index == obj_player1) {
+	var _gp = global.gamepad_main
+
+	if(_gp != undefined) {
+		_move = ceil(gamepad_axis_value(_gp, gp_axislh))
+		_dodgekey = gamepad_button_check_pressed(_gp, gp_face2)
+		_downkey = gamepad_button_check(_gp, gp_shoulderl)
+		_quickattackkey = gamepad_button_check_pressed(_gp, gp_face3)
+		_heavyattackkey = gamepad_button_check_pressed(_gp, gp_face4)
+		_specialattackkey = gamepad_button_check_pressed(_gp, gp_shoulderr)
+		_jumpkey = gamepad_button_check_pressed(_gp, gp_face1)
+	}
+
+}
 
 if (player_state == player_states.NONE || player_state == player_states.LIGHT_ATTACK || player_state == player_states.HEAVY_ATTACK) {
 	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
@@ -119,6 +140,24 @@ if(wall_direction != 0) {
 	xsp = max_spd * wall_direction
 }
 
+if(_jumpkey) {
+	if (jump_current > 0) {
+		ysp = -8
+		jump_current--
+		if (place_meeting(x + max_spd, y, obj_platform)) {
+			wall_direction = -1
+			alarm[0] = wall_jump_speed
+			jump_current--
+		}
+		if (place_meeting(x - max_spd, y, obj_platform)) {
+			wall_direction = 1
+			alarm[0] = wall_jump_speed
+			jump_current--
+		}
+		sprite_index = spr_jump
+	}
+}
+
 //respawn
 if(y > room_height + 500) {
 	life -= 1
@@ -138,17 +177,14 @@ if(isHit) {
 }
 
 //dodge
-if( keyboard_check(dodge_key)) {
+if( _dodgekey) {
 	if ( dodge_current > 0 ) {	
-		if (keyboard_check(move_right_key) || keyboard_check(move_left_key) ) {
+		if (_move == 1 or _move ==-1) {
 			dodge_current--
 			player_state = player_states.DODGING
-			var _right = keyboard_check(vk_right)
-			var _left = keyboard_check(vk_left) 
-			var _moveDodge = _right - _left
 			sprite_index = spr_dodge
 			xsp = _move * max_spd * 4
-		} else if (keyboard_check(down_key)) {
+		} else if (_downkey) {
 			dodge_current--
 			player_state = player_states.PARRYING
 			sprite_index = spr_parry
@@ -159,7 +195,7 @@ if( keyboard_check(dodge_key)) {
 }
 
 //attack
-if (keyboard_check(quick_attack_key) and on_wall == false) {
+if (_quickattackkey and on_wall == false) {
 	if(player_state != player_states.LIGHT_ATTACK) {
 		if(combo_active) {sprite_index = spr_attack2}
 		else {sprite_index = spr_attack}
@@ -170,7 +206,7 @@ if (keyboard_check(quick_attack_key) and on_wall == false) {
 }
 
 //heavy attack
-if (keyboard_check(heavy_attack_key) and on_wall == false) {
+if (_heavyattackkey and on_wall == false) {
 	if(player_state != player_states.HEAVY_ATTACK) {
 		sprite_index = spr_heavy_attack
 		image_index = 0
@@ -179,7 +215,7 @@ if (keyboard_check(heavy_attack_key) and on_wall == false) {
 }
 
 //special attack
-if( keyboard_check(special_attack_key)) {
+if( _specialattackkey) {
 	if(special_meter > attacks_needed) {
 		special_meter = 0
 		
