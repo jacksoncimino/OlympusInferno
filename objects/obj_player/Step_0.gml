@@ -160,7 +160,12 @@ if(_jumpkey) {
 
 //respawn
 if(y > room_height + 500) {
-	life -= 1
+	if not global.gameOver {
+		life -= 1
+		if (life < 0) {
+			life = 0	
+		}
+	}
 	if(life > 0) {
 		x = startX
 		y = startY

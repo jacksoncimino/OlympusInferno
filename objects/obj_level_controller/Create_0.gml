@@ -2,10 +2,16 @@ player1 = ""
 player2 = ""
 multiPlayer = true
 
-gameOver = false
+global.gameOver = false
 song = true
 
-if (room == r_Olympus_Multi or room == r_Underworld_Multi) {
+setVars = false
+pHp = 0
+pSm = 0
+
+menu = true
+
+if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak_Multi) {
 	multiPlayer = true
 	
 	player1 = obj_Zeus
