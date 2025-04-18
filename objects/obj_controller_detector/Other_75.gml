@@ -15,6 +15,9 @@ switch(async_load[? "event_type"]){
 
 if(array_length(global.gamepads) > 0) {
 	global.gamepad_main = global.gamepads[0]
+	if(array_length(global.gamepads) > 1) {
+		global.gamepad_secondary = global.gamepads[1]
+	}
 } else {
 	global.gamepad_main = undefined
 }

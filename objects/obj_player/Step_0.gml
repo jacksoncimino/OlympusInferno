@@ -13,24 +13,27 @@ var _jumpkey = keyboard_check_pressed(jump_key)
 
 var _move = _rightkey - _leftkey
 
+var _gp = undefined
+
 if(object_index == obj_player1) {
-	var _gp = global.gamepad_main
+	_gp = global.gamepad_main
+} else if (object_index == obj_player2) {
+	_gp = global.gamepad_secondary
+}
 
-	if(_gp != undefined) {
-		_move = ceil(gamepad_axis_value(_gp, gp_axislh))
-		_dodgekey = gamepad_button_check_pressed(_gp, gp_face2)
-		_downkey = gamepad_button_check(_gp, gp_shoulderl)
-		_quickattackkey = gamepad_button_check_pressed(_gp, gp_face3)
-		_heavyattackkey = gamepad_button_check_pressed(_gp, gp_face4)
-		_specialattackkey = gamepad_button_check_pressed(_gp, gp_shoulderr)
-		_jumpkey = gamepad_button_check_pressed(_gp, gp_face1)
-	}
-
+if(_gp != undefined) {
+	_move = ceil(gamepad_axis_value(_gp, gp_axislh))
+	_dodgekey = gamepad_button_check_pressed(_gp, gp_face2)
+	_downkey = gamepad_button_check_pressed(_gp, gp_shoulderl)
+	_quickattackkey = gamepad_button_check_pressed(_gp, gp_face3)
+	_heavyattackkey = gamepad_button_check_pressed(_gp, gp_face4)
+	_specialattackkey = gamepad_button_check_pressed(_gp, gp_shoulderr)
+	_jumpkey = gamepad_button_check_pressed(_gp, gp_face1)
 }
 
 if (player_state == player_states.NONE || player_state == player_states.LIGHT_ATTACK || player_state == player_states.HEAVY_ATTACK) {
-	if (_move == 1) xsp = min(max_spd, xsp + acceleration); //accelerate going right
-    if (_move == -1) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
+	if (_move == 1 and xsp < max_spd) xsp = min(max_spd, xsp + acceleration); //accelerate going right
+    if (_move == -1 and xsp > -max_spd) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
 	if (_move == 0) {
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
@@ -78,7 +81,7 @@ and image_index >= 1 and image_index <= 5{
 	hitBox.y2 = rect_y2
 	hitBox.attacker = id
 	if(sprite_index == spr_attack) {hitBox.attack_type = "light"}
-	else {hitBox.attack_type = "heavy"}
+	else {hitBox.attack_type = "combo"}
 }
 
 //heavy attack hitbox
@@ -160,16 +163,15 @@ if(_jumpkey) {
 
 //respawn
 if(y > room_height + 500) {
-	if not global.gameOver {
-		life -= 1
-		if (life < 0) {
-			life = 0	
-		}
-	}
+	life -= 1
 	if(life > 0) {
 		x = startX
 		y = startY
 		hp = 0
+		xsp = 0
+		ysp = 0
+	} else {
+		life = 0
 	}
 }
 
@@ -201,7 +203,7 @@ if( _dodgekey) {
 
 //attack
 if (_quickattackkey and on_wall == false) {
-	if(player_state != player_states.LIGHT_ATTACK) {
+	if(player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK ) {
 		if(combo_active) {sprite_index = spr_attack2}
 		else {sprite_index = spr_attack}
 		
@@ -212,7 +214,7 @@ if (_quickattackkey and on_wall == false) {
 
 //heavy attack
 if (_heavyattackkey and on_wall == false) {
-	if(player_state != player_states.HEAVY_ATTACK) {
+	if(player_state != player_states.HEAVY_ATTACK and player_state != player_states.LIGHT_ATTACK) {
 		sprite_index = spr_heavy_attack
 		image_index = 0
 		player_state = player_states.HEAVY_ATTACK

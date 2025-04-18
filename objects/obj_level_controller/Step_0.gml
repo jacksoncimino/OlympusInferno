@@ -1,9 +1,13 @@
+if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak_Multi) {
+	multiPlayer = true
+}
+
 if(multiPlayer) and not menu {
 	if(song) {
 		audio_play_sound(OI_simplebackground, 1, true)
 		song = false
 	}
-	if not gameOver {
+	if not global.gameOver {
 		if(obj_player1.life <= 0) {
 			audio_stop_sound(OI_simplebackground)
 			instance_create_layer((room_width / 2), 75, "Instances", obj_gameover1)
