@@ -1,8 +1,4 @@
-if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak_Multi) {
-	multiPlayer = true
-}
-
-if(multiPlayer) and not menu {
+if(multiPlayer) {
 	if(song) {
 		audio_play_sound(OI_simplebackground, 1, true)
 		song = false
@@ -22,12 +18,7 @@ if(multiPlayer) and not menu {
 			global.gameOver = true
 		}
 	}
-} else if not menu {
-	if(setVars) {
-		obj_player.life = pHp
-		obj_player.special_meter = pSm
-		setVars = false
-	}
+} else {
 	if(song) {
 		audio_play_sound(OI_simplebackground, 1, true)
 		song = false
@@ -46,16 +37,9 @@ if(multiPlayer) and not menu {
 			if(room == r_SnowyPeak_Single) {
 				alarm[3] = game_get_speed(gamespeed_fps) * 3
 			} else {
-				menu = true
 				alarm[4] = game_get_speed(gamespeed_fps) * 3
 			}
-			pHp = obj_player.life
-			pSm = obj_player.special_meter
 			global.gameOver = true
 		}
 	}
-}
-
-if(room == r_SnowyPeak_Single or room == r_SnowyPeak_Multi or room == r_Olympus_Multi or room == r_Olympus_Single or room == r_Underworld_Multi or room == r_Underworld_Single) {
-	menu = false	
 }

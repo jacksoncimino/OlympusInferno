@@ -63,35 +63,37 @@ if(xsp != 0) {
 	}
 }
 
-//If the player is attacking, dodge or parry (chance)
-if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_height) and state == EnemyStates.READY and obj_player.player_state == player_states.LIGHT_ATTACK) {
-	var _chance = random(100)
+if(instance_exists(obj_player)) {
+	//If the player is attacking, dodge or parry (chance)
+	if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_height) and state == EnemyStates.READY and obj_player.player_state == player_states.LIGHT_ATTACK) {
+		var _chance = random(100)
 	
-	if (_chance > level * 2) {
-		if (_chance > (100 - (((100 - (level * 2))) / 2) + level)) {
-			state = EnemyStates.PARRYING
-			sprite_index = enemy_vals.sprites.parry
-			alarm[1] = 4
-		} else {
-			state = EnemyStates.DODGING
-			sprite_index = enemy_vals.sprites.parry
-			alarm[0] = 12
+		if (_chance > level * 2) {
+			if (_chance > (100 - (((100 - (level * 2))) / 2) + level)) {
+				state = EnemyStates.PARRYING
+				sprite_index = enemy_vals.sprites.parry
+				alarm[1] = 4
+			} else {
+				state = EnemyStates.DODGING
+				sprite_index = enemy_vals.sprites.parry
+				alarm[0] = 12
+			}
 		}
 	}
-}
 
-//attacking the player if near
-if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_height) and state == EnemyStates.READY) {
-	state = EnemyStates.ATTACKING
-	instance_create_layer(x,y,"Instances", obj_cyclops_atk)
-	obj_cyclops_atk.image_xscale = image_xscale
-	alarm[0] = game_get_speed(gamespeed_fps) * 2 //attack cooldown
-}
+	//attacking the player if near
+	if((abs(obj_player.x - x) < sprite_width and abs(obj_player.y - y) < sprite_height) and state == EnemyStates.READY) {
+		state = EnemyStates.ATTACKING
+		instance_create_layer(x,y,"Instances", obj_cyclops_atk)
+		obj_cyclops_atk.image_xscale = image_xscale
+		alarm[0] = game_get_speed(gamespeed_fps) * 2 //attack cooldown
+	}
 
-if(y > room_height + sprite_height * 2) {
-	life = life - 1
-	if(life == 0) {
-		instance_destroy(id, false)
+	if(y > room_height + sprite_height * 2) {
+		life = life - 1
+		if(life == 0) {
+			instance_destroy(id, false)
+		}
 	}
 }
 
