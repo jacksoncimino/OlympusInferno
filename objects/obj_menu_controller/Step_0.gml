@@ -71,7 +71,7 @@ if(room = r_MapSelect) {
 		} else if (map == 2) {
 			room_goto(r_SnowyPeak_Multi)
 		} else if (map == 3) {
-			map = 0	
+			room_goto(r_Mountain_Multi)
 		}
 	}
 }

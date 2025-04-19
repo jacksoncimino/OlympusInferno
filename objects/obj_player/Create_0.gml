@@ -35,6 +35,7 @@ combo_active = false
 //special attack threshold
 special_meter = 0
 attacks_needed = 9
+spak_cooldown = false
 
 dodge_number = char_vals.stats.dodges
 dodge_current = 1

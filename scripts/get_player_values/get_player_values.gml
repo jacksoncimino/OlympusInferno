@@ -79,15 +79,15 @@ function get_player_values(char_name){
 	default:
 		return {
 			sprites: {
-				basic: spr_temp,
-				move: spr_temp,
-				dodge: spr_temp,
-				attack: spr_temp,
-				attack2: spr_temp,
-				heavy_attack: spr_temp,
-				parry: spr_temp,
-				jump: spr_temp,
-				special: spr_temp
+				basic: spr_zeus_idle,
+				move: spr_zeus_walk,
+				dodge: spr_zeus_idle,
+				attack: spr_zeus_attack,
+				attack2: spr_zeus_attack2,
+				heavy_attack: spr_zeus_backhand_attack,
+				parry: spr_zeus_idle,
+				jump: spr_zeus_jump,
+				special: spr_zeus_special
 			},
 			stats: {
 				xspd_max: 5,
@@ -95,7 +95,7 @@ function get_player_values(char_name){
 				frict: 0.5,
 				jumps: 3,
 				dodges: 1,
-				name: "Default"
+				name: "Zeus"
 			}
 		};
 	}

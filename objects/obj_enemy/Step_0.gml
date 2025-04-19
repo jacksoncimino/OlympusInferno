@@ -45,18 +45,18 @@ if(x > (obj_platform.x + (obj_platform.sprite_width / 2))) {
 }
 if(xsp != 0) {
 	if(place_meeting(x+xsp, y, obj_platform)) {
-		if (jump_current > 0) {
+		if (jump_cur > 0) {
 			ysp = -8
-			jump_current--
+			jump_cur--
 			if (place_meeting(x + max_spd, y, obj_platform)) {
 				wall_direction = -1
 				alarm[3] = wall_jump_speed
-				jump_current--
+				jump_cur--
 			}
 			if (place_meeting(x - max_spd, y, obj_platform)) {
 				wall_direction = 1
 				alarm[3] = wall_jump_speed
-				jump_current--
+				jump_cur--
 			}
 			image_index = spr_jump
 		}
@@ -93,6 +93,10 @@ if(instance_exists(obj_player)) {
 		life = life - 1
 		if(life == 0) {
 			instance_destroy(id, false)
+		} else {
+			x = stx
+			y = sty
+			dmg = 0
 		}
 	}
 }

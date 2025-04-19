@@ -5,7 +5,7 @@ multiPlayer = true
 global.gameOver = false
 song = true
 
-if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak_Multi) {
+if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak_Multi or room == r_Mountain_Multi) {
 	multiPlayer = true
 	
 	player1 = obj_Zeus
