@@ -1,18 +1,19 @@
 ysp += 0.3
 
+var _plat = instance_nearest(x,y, obj_platform)
+
 //movement friction
 if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
 
-
 //reset jumps and dodge
-if place_meeting(x, y+ysp, obj_platform) {
+if place_meeting(x, y+ysp, _plat) {
 	if (ysp > 0) {
         jump_cur = jump_max;
     }
     ysp = 0;
 }
-if place_meeting(x, y+ysp, obj_platform) {
+if place_meeting(x, y+ysp, _plat) {
     ysp = 0;
 }
 
@@ -23,7 +24,7 @@ if(state == EnemyStates.HIT) {
 }
 
 //wall hang/ jump
-if place_meeting(x+xsp, y, obj_platform) || place_meeting(x-xsp, y, obj_platform) {
+if place_meeting(x+xsp, y, _plat) || place_meeting(x-xsp, y, _plat) {
 	jump_cur = jump_max - 1
 	if(!on_wall) {ysp = 0.5}
 	else {ysp -= 0.29}
@@ -37,23 +38,29 @@ if(wall_direction != 0) {
 }
 
 //first and foremost, get on the main platform
-
-if(x > (obj_platform.x + (obj_platform.sprite_width / 2))) {
-	xsp -= .3
-} else if (x < (obj_platform.x - (obj_platform.sprite_width / 2))) {
-	xsp += .3
+var _acc = 0
+if(x > (_plat.x + (_plat.sprite_width / 2))) {
+	xsp -= 1
+	_acc = -1
+} else if (x < (_plat.x - (_plat.sprite_width / 2))) {
+	xsp += 1
+	_acc = 1
 }
+
+if (xsp > 0 and xsp < max_spd) xsp = min(max_spd, xsp + _acc); //accelerate going right
+if (xsp < 0 and xsp > -max_spd) xsp = max(-max_spd, xsp + _acc); //accelerate going left
+
 if(xsp != 0) {
-	if(place_meeting(x+xsp, y, obj_platform)) {
+	if(place_meeting(x+xsp, y, _plat)) {
 		if (jump_cur > 0) {
 			ysp = -8
 			jump_cur--
-			if (place_meeting(x + max_spd, y, obj_platform)) {
+			if (place_meeting(x + max_spd, y, _plat)) {
 				wall_direction = -1
 				alarm[3] = wall_jump_speed
 				jump_cur--
 			}
-			if (place_meeting(x - max_spd, y, obj_platform)) {
+			if (place_meeting(x - max_spd, y, _plat)) {
 				wall_direction = 1
 				alarm[3] = wall_jump_speed
 				jump_cur--
@@ -96,6 +103,8 @@ if(instance_exists(obj_player)) {
 		} else {
 			x = stx
 			y = sty
+			xsp = 0
+			ysp = 0
 			dmg = 0
 		}
 	}

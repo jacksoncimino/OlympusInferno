@@ -250,7 +250,7 @@ if( _specialattackkey) {
 				}
 			}
 			spak_cooldown = true
-			alarm[5] = game_get_speed(gamespeed_fps) * 3
+			alarm[5] = game_get_speed(gamespeed_fps) * 1
 		}
 	}
 	sprite_index = spr_special
