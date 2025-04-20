@@ -46,6 +46,28 @@ function get_player_values(char_name){
 				name: "Kronos"
 			}
 		};
+	case obj_Poseidon:
+		return {
+			sprites: {
+				basic: spr_poseidon_idle,
+				move: spr_poseidon_run,
+				dodge: spr_poseidon_idle,
+				attack: spr_poseidon_attack,
+				attack2: spr_poseidon_attack,
+				heavy_attack: spr_poseidon_attack,
+				parry: spr_poseidon_idle,
+				jump: spr_poseidon_jump,
+				special: spr_poseidon_special
+			},
+			stats: {
+				xspd_max: 5,
+				xspd_acc: 1,
+				frict: 0.5,
+				jumps: 3,
+				dodges: 1,
+				name: "Poseidon"
+			}
+		};
 	case obj_cyclops:
 		return {
 			sprites: {

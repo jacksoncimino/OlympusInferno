@@ -9,7 +9,7 @@ if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak
 	multiPlayer = true
 	
 	player1 = obj_Zeus
-	player2 = obj_Kronos
+	player2 = obj_Poseidon
 	
 	//set player keys
 	/*

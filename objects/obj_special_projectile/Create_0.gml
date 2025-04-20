@@ -6,7 +6,7 @@ attacker = obj_player
 
 effect = obj_lightning_bolt
 
-knockback = 2
+knockback = 3
 
 if(object_index == obj_lightning_bolt) {
 	effect = obj_lightning_strike

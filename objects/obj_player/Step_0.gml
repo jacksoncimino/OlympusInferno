@@ -8,7 +8,7 @@ var _dodgekey = keyboard_check(dodge_key)
 var _downkey = keyboard_check(down_key)
 var _quickattackkey = keyboard_check(quick_attack_key)
 var _heavyattackkey = keyboard_check(heavy_attack_key)
-var _specialattackkey = keyboard_check(special_attack_key)
+var _specialattackkey = keyboard_check_pressed(special_attack_key)
 var _jumpkey = keyboard_check_pressed(jump_key)
 
 var _move = _rightkey - _leftkey
@@ -226,11 +226,13 @@ if( _specialattackkey) {
 	if(special_meter > attacks_needed) {
 		if(not spak_cooldown) {
 			special_meter = special_meter - (attacks_needed + 1)
-		
+			special_meter = 0
+			var _special_knockback = 2
 			if (name == "Zeus"){
 				var _bolt = instance_create_layer(x, y, "Instances", obj_lightning_bolt)
 				_bolt.speed = _bolt.spd
 				_bolt.attacker = object_index
+				_bolt.knockback = _special_knockback
 				if (image_xscale == 1) {
 					_bolt.direction = point_direction(x, y, x+1, y)
 				} else {
@@ -242,12 +244,33 @@ if( _specialattackkey) {
 				_fireball.image_yscale = 0.25
 				_fireball.speed = _fireball.spd
 				_fireball.attacker = object_index
+				_fireball.knockback = _special_knockback
 				if (image_xscale == 1) {
 					_fireball.direction = point_direction(x, y, x+1, y)
 				} else {
 					_fireball.image_xscale = -0.25
 					_fireball.direction = point_direction(x, y, x-1, y)
 				}
+			} else if (name == "Poseidon") {
+				var _waterball = undefined
+				var _player = undefined
+				for(var i = 0;i<instance_number(obj_player);i++){
+				    var _currplayer = instance_find(obj_player,i);
+
+				    if _currplayer.id == id{
+						continue
+				    } else {
+						_player = _currplayer
+						break
+					}
+				}
+				var _offsetY = 70
+				_waterball = instance_create_layer(_player.x, _player.y - _offsetY, "Instances", obj_water_ball)
+				_waterball.image_xscale = 0.25
+				_waterball.image_yscale = 0.25
+				_waterball.attackee = _player.id
+				_waterball.offsetY = _offsetY
+				_waterball.knockback = _special_knockback
 			}
 			spak_cooldown = true
 			alarm[5] = game_get_speed(gamespeed_fps) * 1
