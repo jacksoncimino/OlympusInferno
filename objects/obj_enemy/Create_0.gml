@@ -13,8 +13,11 @@ spr_special = enemy_vals.sprites.special
 ysp = 0
 xsp = 0
 
-max_spd = 3
-wall_jump_speed = 2
+max_spd = 5
+wall_jump_speed = game_get_speed(gamespeed_fps) * 0.3
+
+dodge = true
+dodge_current = 1
 
 frict = enemy_vals.stats.frict
 
@@ -22,19 +25,24 @@ wall_direction = 0
 
 life = 3
 
+combo_active = false
+
+special_meter = 0
+
 jump_cur = 3
 jump_max = 3
+jump = true
 
 on_wall = false
+
+isHit = false
 
 //States
 enum EnemyStates {
 	READY,
-	ATTACKING,
-	DODGING,
-	PARRYING,
-	HIT,
-	PARRYFAIL
+	LIGHT,
+	HEAVY,
+	DODGING
 }
 
 state = EnemyStates.READY

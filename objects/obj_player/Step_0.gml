@@ -226,7 +226,6 @@ if( _specialattackkey) {
 	if(special_meter > attacks_needed) {
 		if(not spak_cooldown) {
 			special_meter = special_meter - (attacks_needed + 1)
-			special_meter = 0
 			var _special_knockback = 2
 			if (name == "Zeus"){
 				var _bolt = instance_create_layer(x, y, "Instances", obj_lightning_bolt)
