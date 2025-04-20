@@ -205,7 +205,7 @@ if( _dodgekey) {
 
 //attack
 if (_quickattackkey and on_wall == false) {
-	if(player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK ) {
+	if(player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK and sprite_index != spr_special ) {
 		if(combo_active) {sprite_index = spr_attack2}
 		else {sprite_index = spr_attack}
 		
@@ -216,7 +216,7 @@ if (_quickattackkey and on_wall == false) {
 
 //heavy attack
 if (_heavyattackkey and on_wall == false) {
-	if(player_state != player_states.HEAVY_ATTACK and player_state != player_states.LIGHT_ATTACK) {
+	if(player_state != player_states.HEAVY_ATTACK and player_state != player_states.LIGHT_ATTACK and sprite_index != spr_special ) {
 		sprite_index = spr_heavy_attack
 		image_index = 0
 		player_state = player_states.HEAVY_ATTACK

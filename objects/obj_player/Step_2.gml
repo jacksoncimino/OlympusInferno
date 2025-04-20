@@ -10,6 +10,14 @@ if(object_index == obj_player1) {
 	}
 }
 
+if(object_index == obj_player2) {
+	var _gp = global.gamepad_secondary
+
+	if(_gp != undefined) {
+		_downkey =  gamepad_button_check(_gp, gp_shoulderl)
+	}
+}
+
 if(_plat != noone) {
 	if bbox_bottom + ysp < _plat.bbox_bottom
 	&& ysp >= 0
