@@ -42,7 +42,7 @@ if(num_players > 0) {
     {
 		var instGrab_player = players[| i]
 		if (instGrab_player.id != attacker) {
-			if(!(instGrab_player.isHit)) {
+			if(!(instGrab_player.isHit) and instGrab_player.player_state != player_states.DODGING) {
 				instGrab_player.hp ++
 				instGrab_player.isHit = true
 				instGrab_player.image_blend = c_red

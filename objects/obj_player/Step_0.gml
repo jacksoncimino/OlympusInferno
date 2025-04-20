@@ -19,6 +19,8 @@ if(object_index == obj_player1) {
 	_gp = global.gamepad_main
 } else if (object_index == obj_player2) {
 	_gp = global.gamepad_secondary
+} else {
+	_gp = global.gamepad_main
 }
 
 if(_gp != undefined) {
