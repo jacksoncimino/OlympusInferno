@@ -3,7 +3,7 @@ var players = ds_list_create();
 var num_players = collision_rectangle_list(x+x1, y+y1, x+x2, y+y2, obj_player,  0, 0, players, 0)
 
 if(instGrab_enemy != noone) {
-	if(!(instGrab_enemy.isHit)) {
+	if(!(instGrab_enemy.isHit) and instGrab_enemy.state != EnemyStates.DODGING) {
 		instGrab_enemy.dmg ++
 		instGrab_enemy.isHit = true
 		instGrab_enemy.image_blend = c_red

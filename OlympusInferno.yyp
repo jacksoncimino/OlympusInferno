@@ -55,6 +55,8 @@
     {"id":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_OlympusPlatform","path":"objects/obj_OlympusPlatform/obj_OlympusPlatform.yy",},},
+    {"id":{"name":"obj_p1_char","path":"objects/obj_p1_char/obj_p1_char.yy",},},
+    {"id":{"name":"obj_p2_char","path":"objects/obj_p2_char/obj_p2_char.yy",},},
     {"id":{"name":"obj_platform_invisible","path":"objects/obj_platform_invisible/obj_platform_invisible.yy",},},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},

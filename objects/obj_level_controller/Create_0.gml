@@ -8,8 +8,28 @@ song = true
 if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak_Multi or room == r_Mountain_Multi) {
 	multiPlayer = true
 	
-	player1 = obj_Zeus
-	player2 = obj_Poseidon
+	switch obj_input.p1 {
+		case 0:
+			player1 = obj_Zeus 
+		break;
+		case 1:
+			player1 = obj_Kronos
+		break;
+		case 2:
+			player1 = obj_Poseidon
+		break;
+	}
+	switch obj_input.p2 {
+		case 0:
+			player2 = obj_Zeus 
+		break;
+		case 1:
+			player2 = obj_Kronos
+		break;
+		case 2:
+			player2 = obj_Poseidon
+		break;
+	}
 	
 	//set player keys
 	/*
