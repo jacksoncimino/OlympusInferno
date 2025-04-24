@@ -58,22 +58,41 @@ and image_index >= 1 and image_index <= 5{
 	var rect_y1 = 0
 	var rect_y2 = 0
 	
-	if(image_xscale == 1) {
-		hb_startX = -10
+	if(name = "Poseidon") {
+		hb_startX = 50
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = 60
+		rect_x2 = 30
 		rect_y1 = 20
-		rect_y2 = -10
-	}
-	
-	if (image_xscale == -1) {
+		rect_y2 = 10
+		if(sprite_index != spr_attack) {
+			hb_startX += 15
+		}	
+	} else {
 		hb_startX = 10
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = -60
+		rect_x2 = 40
 		rect_y1 = 20
-		rect_y2 = -10
+		rect_y2 = 10
+	}
+	
+	if(image_xscale == 1) {
+		hb_startX = hb_startX
+		hb_startY = hb_startY
+		rect_x1 = rect_x1
+		rect_x2 = rect_x2
+		rect_y1 = rect_y1
+		rect_y2 = -rect_y2
+	}
+	
+	if (image_xscale == -1) {
+		hb_startX = -hb_startX
+		hb_startY = hb_startY
+		rect_x1 = rect_x1
+		rect_x2 = -rect_x2
+		rect_y1 = rect_y1
+		rect_y2 = -rect_y2
 	}
 	
 	var hitBox = instance_create_layer(x + hb_startX, y + hb_startY, "Instances", obj_attack_hitbox)
@@ -97,22 +116,38 @@ and image_index >= 7 and image_index <= 7{
 	var rect_y1 = 0
 	var rect_y2 = 0
 	
-	if(image_xscale == 1) {
-		hb_startX = -10
+	if(name = "Poseidon") {
+		hb_startX = 65
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = 60
+		rect_x2 = 30
 		rect_y1 = 20
-		rect_y2 = -10
-	}
-	
-	if (image_xscale == -1) {
+		rect_y2 = 10
+	} else {
 		hb_startX = 10
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = -60
+		rect_x2 = 40
 		rect_y1 = 20
-		rect_y2 = -10
+		rect_y2 = 10
+	}
+	
+	if(image_xscale == 1) {
+		hb_startX = hb_startX
+		hb_startY = hb_startY
+		rect_x1 = rect_x1
+		rect_x2 = rect_x2
+		rect_y1 = rect_y1
+		rect_y2 = -rect_y2
+	}
+	
+	if (image_xscale == -1) {
+		hb_startX = -hb_startX
+		hb_startY = hb_startY
+		rect_x1 = rect_x1
+		rect_x2 = -rect_x2
+		rect_y1 = rect_y1
+		rect_y2 = -rect_y2
 	}
 	
 	var hitBox = instance_create_layer(x + hb_startX, y + hb_startY, "Instances", obj_attack_hitbox)

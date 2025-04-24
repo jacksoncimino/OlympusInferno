@@ -163,6 +163,8 @@
     {"id":{"name":"spr_player2Win","path":"sprites/spr_player2Win/spr_player2Win.yy",},},
     {"id":{"name":"spr_poseidon_attack","path":"sprites/spr_poseidon_attack/spr_poseidon_attack.yy",},},
     {"id":{"name":"spr_poseidon_climb","path":"sprites/spr_poseidon_climb/spr_poseidon_climb.yy",},},
+    {"id":{"name":"spr_poseidon_combo","path":"sprites/spr_poseidon_combo/spr_poseidon_combo.yy",},},
+    {"id":{"name":"spr_poseidon_heavy_attack","path":"sprites/spr_poseidon_heavy_attack/spr_poseidon_heavy_attack.yy",},},
     {"id":{"name":"spr_poseidon_idle","path":"sprites/spr_poseidon_idle/spr_poseidon_idle.yy",},},
     {"id":{"name":"spr_poseidon_jump","path":"sprites/spr_poseidon_jump/spr_poseidon_jump.yy",},},
     {"id":{"name":"spr_poseidon_run","path":"sprites/spr_poseidon_run/spr_poseidon_run.yy",},},

@@ -10,7 +10,7 @@ if(instGrab_enemy != noone) {
 		attacker.special_meter++
 		
 		//knockback
-		if(instGrab_enemy.x > x) {
+		if(instGrab_enemy.x > attacker.x) {
 			if(attack_type == "heavy") {
 				instGrab_enemy.xsp = knockback * instGrab_enemy.dmg
 			} else if (attack_type == "light") {
@@ -48,7 +48,7 @@ if(num_players > 0) {
 				instGrab_player.image_blend = c_red
 				attacker.special_meter++
 		
-				if(instGrab_player.x > x) {
+				if(instGrab_player.x > attacker.x) {
 					if(attack_type == "heavy") {
 						instGrab_player.xsp = knockback * instGrab_player.hp
 					} else if (attack_type == "light") {

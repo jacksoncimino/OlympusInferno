@@ -53,8 +53,8 @@ function get_player_values(char_name){
 				move: spr_poseidon_run,
 				dodge: spr_poseidon_idle,
 				attack: spr_poseidon_attack,
-				attack2: spr_poseidon_attack,
-				heavy_attack: spr_poseidon_attack,
+				attack2: spr_poseidon_combo,
+				heavy_attack: spr_poseidon_heavy_attack,
 				parry: spr_poseidon_idle,
 				jump: spr_poseidon_jump,
 				special: spr_poseidon_special
