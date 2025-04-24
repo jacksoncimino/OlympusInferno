@@ -31,6 +31,9 @@ if(room = r_MainMenu) {
 		audio_play_sound(Menu_Select, 1, false)
 		room_goto(r_ModeSelect)
 	}
+	if(not audio_is_playing(OI_Menu_bkgnd)) {
+		audio_play_sound(OI_Menu_bkgnd, 1, true)
+	}
 }
 
 if(room = r_ModeSelect) {
@@ -52,10 +55,11 @@ if(room = r_ModeSelect) {
 	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
 		if(single_player = 1) {
-			room_goto(r_Olympus_Single)
 			audio_stop_sound(Menu_Click)
 			audio_stop_sound(Menu_Select)
 			audio_play_sound(Menu_Select, 1, false)
+			audio_stop_sound(OI_Menu_bkgnd)
+			room_goto(r_Olympus_Single)
 		} else {
 			room_goto(r_MultiplayerSelect)
 			audio_stop_sound(Menu_Click)
@@ -263,6 +267,9 @@ if(room = r_MapSelect) {
 }
 
 if(room = r_Player1Win or room = r_Player2Win or room = r_SinglePlayer_Win or room = r_SinglePlayer_Lose) {
+	if(not audio_is_playing(OI_Menu_bkgnd)) {
+		audio_play_sound(OI_Menu_bkgnd, 1, true)
+	}
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
 		single_player = -1
 		room_goto(r_MainMenu)

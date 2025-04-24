@@ -8,3 +8,5 @@ if(map == 0) {
 } else if (map == 3) {
 	room_goto(r_Mountain_Multi)
 }
+
+audio_stop_sound(OI_Menu_bkgnd)

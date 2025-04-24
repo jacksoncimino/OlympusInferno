@@ -95,6 +95,7 @@
     {"id":{"name":"Menu_Back","path":"sounds/Menu_Back/Menu_Back.yy",},},
     {"id":{"name":"Menu_Click","path":"sounds/Menu_Click/Menu_Click.yy",},},
     {"id":{"name":"Menu_Select","path":"sounds/Menu_Select/Menu_Select.yy",},},
+    {"id":{"name":"OI_Menu_bkgnd","path":"sounds/OI_Menu_bkgnd/OI_Menu_bkgnd.yy",},},
     {"id":{"name":"OI_simplebackground","path":"sounds/OI_simplebackground/OI_simplebackground.yy",},},
     {"id":{"name":"spr_background_city","path":"sprites/spr_background_city/spr_background_city.yy",},},
     {"id":{"name":"spr_background_mainmenu","path":"sprites/spr_background_mainmenu/spr_background_mainmenu.yy",},},
