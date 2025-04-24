@@ -85,7 +85,7 @@ if(room = r_ModeSelect) {
 			audio_stop_sound(Menu_Select)
 			audio_play_sound(Menu_Select, 1, false)
 			audio_stop_sound(OI_Menu_bkgnd)
-			room_goto(r_Olympus_Single)
+			room_goto(r_Olympus_Single_Story)
 		} else if (single_player == 0) {
 			room_goto(r_MultiplayerSelect)
 			audio_stop_sound(Menu_Click)
@@ -318,4 +318,44 @@ if(room == r_HowToPlay) {
 		audio_play_sound(Menu_Select, 1, false)
 		room_goto(r_ModeSelect)
 	}
+}
+
+if(room == r_Olympus_Single_Story) {
+	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
+		
+		room_goto(r_Olympus_Single)
+	}	
+}
+
+if(room == r_Underworld_Single_Story) {
+	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
+		
+		room_goto(r_Underworld_Single)
+	}	
+}
+
+if(room == r_SnowyPeak_Single_Story) {
+	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
+		
+		room_goto(r_SnowyPeak_Single)
+	}	
+}
+
+if(room == r_Mountain_Single_Story) {
+	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
+		
+		room_goto(r_Mountain_Single)
+	}	
 }
