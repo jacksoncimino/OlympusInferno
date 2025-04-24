@@ -194,19 +194,15 @@ if(room = r_MapSelect) {
 	}
 	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
-		if(map == 0) {
-			room_goto(r_Olympus_Multi)
-		} else if (map == 1) {
-			room_goto(r_Underworld_Multi)
-		} else if (map == 2) {
-			room_goto(r_SnowyPeak_Multi)
-		} else if (map == 3) {
-			room_goto(r_Mountain_Multi)
-		}
+		alarm[2] = game_get_speed(gamespeed_fps) * 3
 	}
 	
 	if(keyboard_check_pressed(vk_backspace) or keyboard_check_pressed(vk_escape) or _B or _Y) {
-		room_goto(r_MultiplayerSelect)	
+		if (alarm[2] > 0) {
+			alarm[2] = -1
+		} else {
+			room_goto(r_MultiplayerSelect)
+		}
 	}
 }
 

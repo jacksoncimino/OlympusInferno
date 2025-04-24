@@ -1,5 +1,5 @@
 {
-  "$GMProject":"",
+  "$GMProject":"v1",
   "%Name":"OlympusInferno",
   "AudioGroups":[
     {"$GMAudioGroup":"","%Name":"audiogroup_default","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
@@ -26,11 +26,12 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
+  "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.11.0.179",
+    "IDEVersion":"2024.13.1.193",
   },
   "name":"OlympusInferno",
   "resources":[
@@ -55,7 +56,9 @@
     {"id":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
     {"id":{"name":"obj_OlympusPlatform","path":"objects/obj_OlympusPlatform/obj_OlympusPlatform.yy",},},
+    {"id":{"name":"obj_p1_arrow","path":"objects/obj_p1_arrow/obj_p1_arrow.yy",},},
     {"id":{"name":"obj_p1_char","path":"objects/obj_p1_char/obj_p1_char.yy",},},
+    {"id":{"name":"obj_p2_arrow","path":"objects/obj_p2_arrow/obj_p2_arrow.yy",},},
     {"id":{"name":"obj_p2_char","path":"objects/obj_p2_char/obj_p2_char.yy",},},
     {"id":{"name":"obj_platform_invisible","path":"objects/obj_platform_invisible/obj_platform_invisible.yy",},},
     {"id":{"name":"obj_platform","path":"objects/obj_platform/obj_platform.yy",},},
@@ -142,6 +145,8 @@
     {"id":{"name":"spr_Mountain_tiles","path":"sprites/spr_Mountain_tiles/spr_Mountain_tiles.yy",},},
     {"id":{"name":"spr_olympus_background","path":"sprites/spr_olympus_background/spr_olympus_background.yy",},},
     {"id":{"name":"spr_olympus_platform","path":"sprites/spr_olympus_platform/spr_olympus_platform.yy",},},
+    {"id":{"name":"spr_player_arrow_1","path":"sprites/spr_player_arrow_1/spr_player_arrow_1.yy",},},
+    {"id":{"name":"spr_player_arrow_2","path":"sprites/spr_player_arrow_2/spr_player_arrow_2.yy",},},
     {"id":{"name":"spr_player1Win","path":"sprites/spr_player1Win/spr_player1Win.yy",},},
     {"id":{"name":"spr_player2Win","path":"sprites/spr_player2Win/spr_player2Win.yy",},},
     {"id":{"name":"spr_poseidon_attack","path":"sprites/spr_poseidon_attack/spr_poseidon_attack.yy",},},

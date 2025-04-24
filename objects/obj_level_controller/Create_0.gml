@@ -10,7 +10,7 @@ if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak
 	
 	switch obj_input.p1 {
 		case 0:
-			player1 = obj_Zeus 
+			player1 = obj_Zeus
 		break;
 		case 1:
 			player1 = obj_Kronos
@@ -21,7 +21,7 @@ if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak
 	}
 	switch obj_input.p2 {
 		case 0:
-			player2 = obj_Zeus 
+			player2 = obj_Zeus
 		break;
 		case 1:
 			player2 = obj_Kronos

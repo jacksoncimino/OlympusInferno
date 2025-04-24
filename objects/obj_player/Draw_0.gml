@@ -7,6 +7,7 @@ if(object_index == obj_player1) {
 	drawX = room_width - 300
 }
 
+draw_set_halign(fa_left)
 draw_set_font(fnt_char_header)
 draw_set_color(c_black)
 draw_text(drawX, room_height - 250, name)
