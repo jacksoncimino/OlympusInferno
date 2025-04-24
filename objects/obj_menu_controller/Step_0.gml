@@ -37,34 +37,65 @@ if(room = r_MainMenu) {
 }
 
 if(room = r_ModeSelect) {
-	if(keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_down) or _dUp or _dDown) {
-		single_player *= -1
-		obj_menu_arrow.y += (194 * single_player)
+	if(keyboard_check_pressed(vk_up) or _dUp) {
+		single_player -= 1
 		audio_stop_sound(Menu_Click)
 		audio_stop_sound(Menu_Select)
 		audio_play_sound(Menu_Click, 1, false)
-	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislv) != 0 and not controller_stick_cooldown) {
+	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislv) > 0 and not controller_stick_cooldown) {
 		audio_stop_sound(Menu_Click)
 		audio_stop_sound(Menu_Select)
 		audio_play_sound(Menu_Click, 1, false)
-		single_player *= -1
-		obj_menu_arrow.y += (194 * single_player)
+		single_player -= 1
 		controller_stick_cooldown = true
 		alarm[0] = game_get_speed(gamespeed_fps) * 0.22
 	}
 	
+	if(keyboard_check_pressed(vk_down) or _dDown) {
+		single_player += 1
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
+	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislv) < 0 and not controller_stick_cooldown) {
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
+		single_player += 1
+		controller_stick_cooldown = true
+		alarm[0] = game_get_speed(gamespeed_fps) * 0.22
+	}
+	
+	if(single_player > 2) {
+		single_player = 0
+	} else if (single_player < 0) {
+		single_player = 2	
+	}
+	
+	if(single_player = 0) {
+		obj_menu_arrow.y = 256	
+	} else if (single_player = 1) {
+		obj_menu_arrow.y = 416	
+	} else {
+		obj_menu_arrow.y = 576	
+	}
+	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
-		if(single_player = 1) {
+		if(single_player == 1) {
 			audio_stop_sound(Menu_Click)
 			audio_stop_sound(Menu_Select)
 			audio_play_sound(Menu_Select, 1, false)
 			audio_stop_sound(OI_Menu_bkgnd)
 			room_goto(r_Olympus_Single)
-		} else {
+		} else if (single_player == 0) {
 			room_goto(r_MultiplayerSelect)
 			audio_stop_sound(Menu_Click)
 			audio_stop_sound(Menu_Select)
 			audio_play_sound(Menu_Select, 1, false)
+		} else {
+			audio_stop_sound(Menu_Click)
+			audio_stop_sound(Menu_Select)
+			audio_play_sound(Menu_Select, 1, false)
+			room_goto(r_HowToPlay)
 		}
 	}
 }
@@ -139,7 +170,7 @@ if(room = r_MultiplayerSelect) {
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
 		if (not p1_lock) {
 			p1_lock = true	
-			obj_menu_arrow.x = 800
+			obj_menu_arrow.x = 832
 		} else if (not p2_lock) {
 			p2_lock = true
 			obj_menu_arrow.x = room_width + 1000
@@ -164,11 +195,11 @@ if(room = r_MultiplayerSelect) {
 	if(keyboard_check_pressed(vk_backspace) or keyboard_check_pressed(vk_escape) or _B or _Y) {
 		if (alarm[1] > 0) {
 			alarm[1] = -1
-			obj_menu_arrow.x = 800
+			obj_menu_arrow.x = 832
 			p2_lock = false
 		} else if (p1_lock) {
 			p1_lock = false
-			obj_menu_arrow.x = 256
+			obj_menu_arrow.x = 288
 		} else {
 			room_goto(r_ModeSelect)
 		}
@@ -234,17 +265,18 @@ if(room = r_MapSelect) {
 	}
 	
 	if(map == 0) {
-		obj_menu_arrow.x = 96
-		obj_menu_arrow.y = 160
+		//+32 +32
+		obj_menu_arrow.x = 128
+		obj_menu_arrow.y = 192
 	} else if (map == 1) {
-		obj_menu_arrow.x = 736
-		obj_menu_arrow.y = 160
+		obj_menu_arrow.x = 768
+		obj_menu_arrow.y = 192
 	} else if (map == 2) {
-		obj_menu_arrow.x = 96
-		obj_menu_arrow.y = 512
+		obj_menu_arrow.x = 128
+		obj_menu_arrow.y = 544
 	} else if (map == 3) {
-		obj_menu_arrow.x = 736
-		obj_menu_arrow.y = 512
+		obj_menu_arrow.x = 768
+		obj_menu_arrow.y = 544
 	}
 	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
@@ -276,5 +308,14 @@ if(room = r_Player1Win or room = r_Player2Win or room = r_SinglePlayer_Win or ro
 		audio_stop_sound(Menu_Click)
 		audio_stop_sound(Menu_Select)
 		audio_play_sound(Menu_Select, 1, false)
+	}
+}
+
+if(room == r_HowToPlay) {
+	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X or keyboard_check_pressed(vk_backspace) or keyboard_check_pressed(vk_escape) or _B or _Y) {
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
+		room_goto(r_ModeSelect)
 	}
 }

@@ -1,4 +1,4 @@
-single_player = -1
+single_player = 0
 
 map = 0
 
