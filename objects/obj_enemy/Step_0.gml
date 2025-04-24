@@ -245,7 +245,7 @@ if(instance_exists(obj_player)) {
 	if(y > room_height + sprite_height * 2) {
 		life = life - 1
 		if(life == 0) {
-			instance_destroy(id, false)
+			instance_destroy(id, true)
 		} else {
 			x = stx
 			y = sty

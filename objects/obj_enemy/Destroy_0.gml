@@ -1,0 +1,1 @@
+instance_destroy(obj_p2_arrow, false)
