@@ -25,8 +25,10 @@ if(_gp != undefined) {
 
 if(room = r_MainMenu) {
 	if keyboard_check_pressed(vk_anykey) {
-		room_goto(r_ModeSelect)	
+		audio_play_sound(Menu_Select, 1, false)
+		room_goto(r_ModeSelect)
 	} else if(_B or _A or _Stick or _X or _Y or _dDown or _dLeft or _dRight or _dUp) {
+		audio_play_sound(Menu_Select, 1, false)
 		room_goto(r_ModeSelect)
 	}
 }
@@ -35,7 +37,13 @@ if(room = r_ModeSelect) {
 	if(keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_down) or _dUp or _dDown) {
 		single_player *= -1
 		obj_menu_arrow.y += (194 * single_player)
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislv) != 0 and not controller_stick_cooldown) {
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 		single_player *= -1
 		obj_menu_arrow.y += (194 * single_player)
 		controller_stick_cooldown = true
@@ -44,9 +52,15 @@ if(room = r_ModeSelect) {
 	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
 		if(single_player = 1) {
-			room_goto(r_Olympus_Single)	
+			room_goto(r_Olympus_Single)
+			audio_stop_sound(Menu_Click)
+			audio_stop_sound(Menu_Select)
+			audio_play_sound(Menu_Select, 1, false)
 		} else {
 			room_goto(r_MultiplayerSelect)
+			audio_stop_sound(Menu_Click)
+			audio_stop_sound(Menu_Select)
+			audio_play_sound(Menu_Select, 1, false)
 		}
 	}
 }
@@ -82,12 +96,18 @@ if(room = r_MultiplayerSelect) {
 		} else if (not p2_lock) {
 			player2 += 1	
 		}
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (keyboard_check_pressed(vk_left) or _dLeft) {
 		if(not p1_lock) {
 			player1 -= 1	
 		} else if (not p2_lock) {
 			player2 -= 1
 		}
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislh) > 0 and not controller_stick_cooldown) {
 		if(not p1_lock) {
 			player1 += 1	
@@ -96,6 +116,9 @@ if(room = r_MultiplayerSelect) {
 		}
 		controller_stick_cooldown = true
 		alarm[0] = game_get_speed(gamespeed_fps) * 0.22
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislh) < 0 and not controller_stick_cooldown) {
 		if(not p1_lock) {
 			player1 += 1	
@@ -104,6 +127,9 @@ if(room = r_MultiplayerSelect) {
 		}
 		controller_stick_cooldown = true
 		alarm[0] = game_get_speed(gamespeed_fps) * 0.22
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	}
 	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
@@ -115,6 +141,9 @@ if(room = r_MultiplayerSelect) {
 			obj_menu_arrow.x = room_width + 1000
 			alarm[1] = game_get_speed(gamespeed_fps) * 3
 		}
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
 	}
 	
 	if(player1 > 2) {
@@ -139,22 +168,37 @@ if(room = r_MultiplayerSelect) {
 		} else {
 			room_goto(r_ModeSelect)
 		}
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Back, 1, false)
 	}
 }
 
 if(room = r_MapSelect) {
 	if(keyboard_check_pressed(vk_right) or _dRight) {
 		map += 1
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (keyboard_check_pressed(vk_left) or _dLeft) {
 		map -= 1	
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislh) > 0 and not controller_stick_cooldown) {
 		map += 1
 		controller_stick_cooldown = true
 		alarm[0] = game_get_speed(gamespeed_fps) * 0.22
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislh) < 0 and not controller_stick_cooldown) {
 		map -= 1
 		controller_stick_cooldown = true
 		alarm[0] = game_get_speed(gamespeed_fps) * 0.22
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	}
 	
 	if(map > 3) {
@@ -169,6 +213,9 @@ if(room = r_MapSelect) {
 		} else {
 			map -= 2
 		}
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	} else if (_gp != undefined and gamepad_axis_value(_gp, gp_axislv) != 0 and not controller_stick_cooldown) {
 		controller_stick_cooldown = true
 		alarm[0] = game_get_speed(gamespeed_fps) * 0.22
@@ -177,6 +224,9 @@ if(room = r_MapSelect) {
 		} else {
 			map -= 2	
 		}
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Click, 1, false)
 	}
 	
 	if(map == 0) {
@@ -195,6 +245,9 @@ if(room = r_MapSelect) {
 	
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
 		alarm[2] = game_get_speed(gamespeed_fps) * 3
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
 	}
 	
 	if(keyboard_check_pressed(vk_backspace) or keyboard_check_pressed(vk_escape) or _B or _Y) {
@@ -203,6 +256,9 @@ if(room = r_MapSelect) {
 		} else {
 			room_goto(r_MultiplayerSelect)
 		}
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Back, 1, false)
 	}
 }
 
@@ -210,5 +266,8 @@ if(room = r_Player1Win or room = r_Player2Win or room = r_SinglePlayer_Win or ro
 	if(keyboard_check_pressed(vk_space) or keyboard_check_pressed(vk_enter) or _A or _X) {
 		single_player = -1
 		room_goto(r_MainMenu)
+		audio_stop_sound(Menu_Click)
+		audio_stop_sound(Menu_Select)
+		audio_play_sound(Menu_Select, 1, false)
 	}
 }

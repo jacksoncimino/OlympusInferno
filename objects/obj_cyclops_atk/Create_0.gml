@@ -1,3 +1,0 @@
-alarm[0] = game_get_speed(gamespeed_fps) * (7/30)
-
-damage = true
