@@ -18,6 +18,9 @@ if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak
 		case 2:
 			player1 = obj_Poseidon
 		break;
+		case 3:
+			player1 = obj_Minotaur
+		break;
 	}
 	switch obj_input.p2 {
 		case 0:
@@ -28,6 +31,9 @@ if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak
 		break;
 		case 2:
 			player2 = obj_Poseidon
+		break;
+		case 3:
+			player2 = obj_Minotaur
 		break;
 	}
 	

@@ -7,11 +7,11 @@
   "inheritLayers":false,
   "instanceCreationOrder":[
     {"name":"inst_18ED4D97","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
-    {"name":"inst_72B975AA","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
     {"name":"inst_60DE81A3","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
     {"name":"inst_36258B0C","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
     {"name":"inst_2B0218A7","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
     {"name":"inst_4F69FFAE","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
+    {"name":"inst_72B975AA","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
   ],
   "isDnd":false,
   "layers":[

@@ -194,7 +194,9 @@ if(_jumpkey) {
 			alarm[0] = wall_jump_speed
 			jump_current--
 		}
-		sprite_index = spr_jump
+		if(player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK and sprite_index != spr_special ) {
+			sprite_index = spr_jump
+		}
 	}
 }
 

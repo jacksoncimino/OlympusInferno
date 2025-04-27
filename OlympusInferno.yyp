@@ -54,6 +54,7 @@
     {"id":{"name":"obj_lightning_strike","path":"objects/obj_lightning_strike/obj_lightning_strike.yy",},},
     {"id":{"name":"obj_menu_arrow","path":"objects/obj_menu_arrow/obj_menu_arrow.yy",},},
     {"id":{"name":"obj_menu_controller","path":"objects/obj_menu_controller/obj_menu_controller.yy",},},
+    {"id":{"name":"obj_Minotaur","path":"objects/obj_Minotaur/obj_Minotaur.yy",},},
     {"id":{"name":"obj_OlympusPlatform","path":"objects/obj_OlympusPlatform/obj_OlympusPlatform.yy",},},
     {"id":{"name":"obj_p1_arrow","path":"objects/obj_p1_arrow/obj_p1_arrow.yy",},},
     {"id":{"name":"obj_p1_char","path":"objects/obj_p1_char/obj_p1_char.yy",},},

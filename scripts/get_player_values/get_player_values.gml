@@ -68,6 +68,28 @@ function get_player_values(char_name){
 				name: "Poseidon"
 			}
 		};
+	case obj_Minotaur:
+		return {
+			sprites: {
+				basic: spr_minotaur_idle,
+				move: spr_minotaur_run,
+				dodge: spr_minotaur_idle,
+				attack: spr_minotaur_attack,
+				attack2: spr_minotaur_attack,
+				heavy_attack: spr_minotaur_attack,
+				parry: spr_minotaur_idle,
+				jump: spr_minotaur_jump,
+				special: spr_minotaur_idle
+			},
+			stats: {
+				xspd_max: 5,
+				xspd_acc: 1,
+				frict: 0.5,
+				jumps: 3,
+				dodges: 1,
+				name: "Minotaur"
+			}
+		};
 	case obj_cyclops:
 		return {
 			sprites: {

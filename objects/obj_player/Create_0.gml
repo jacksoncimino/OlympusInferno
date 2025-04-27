@@ -19,11 +19,10 @@ onFloating = false
 jump_number = char_vals.stats.jumps
 jump_current = 0
 
-//players will have default sprites. Change these for each new player child
 spr_move = char_vals.sprites.move
 spr_basic = char_vals.sprites.basic
 spr_dodge = char_vals.sprites.dodge
-spr_attack = char_vals.sprites.attack
+spr_attack = char_vals.sprites.attack 
 spr_attack2 = char_vals.sprites.attack2
 spr_heavy_attack = char_vals.sprites.heavy_attack
 spr_parry = char_vals.sprites.parry
