@@ -79,7 +79,7 @@ function get_player_values(char_name){
 				heavy_attack: spr_minotaur_attack,
 				parry: spr_minotaur_idle,
 				jump: spr_minotaur_jump,
-				special: spr_minotaur_idle
+				special: spr_zeus_special
 			},
 			stats: {
 				xspd_max: 5,
@@ -90,18 +90,18 @@ function get_player_values(char_name){
 				name: "Minotaur"
 			}
 		};
-	case obj_cyclops:
+	case obj_Cyclops:
 		return {
 			sprites: {
 				basic: spr_cyclops_idle,
-				move: spr_cyclops_idle,
+				move: spr_cyclops_run,
 				dodge: spr_cyclops_idle,
-				attack: spr_cyclops_idle,
-				attack2: spr_cyclops_idle,
-				heavy_attack: spr_cyclops_idle,
+				attack: spr_cyclops_attack,
+				attack2: spr_cyclops_attack,
+				heavy_attack: spr_cyclops_attack,
 				parry: spr_cyclops_idle,
-				jump: spr_cyclops_idle,
-				special: spr_cyclops_idle
+				jump: spr_cyclops_jump,
+				special: spr_zeus_special
 			},
 			stats: {
 				xspd_max: 5,

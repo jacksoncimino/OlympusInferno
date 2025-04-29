@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_cyclops",
+  "%Name":"obj_Cyclops",
   "eventList":[],
   "managed":true,
-  "name":"obj_cyclops",
+  "name":"obj_Cyclops",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
