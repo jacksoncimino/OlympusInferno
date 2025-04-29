@@ -22,6 +22,13 @@ function get_player_values(char_name){
 				jumps: 3,
 				dodges: 1,
 				name: "Zeus"
+			},
+			sounds: {
+				running: audio_play_sound(running_sound, 1, false),
+				jumping: audio_play_sound(jumping_sound, 1, false),
+				light_attack_sound: audio_play_sound(sword_swing_lite, 1, false),
+				heavy_attack_sound: audio_play_sound(sword_swing_heavy, 1, false),
+				lightning_sound: audio_play_sound(lightning_strike, 1, false)
 			}
 		};
 	case obj_Kronos:
@@ -44,6 +51,13 @@ function get_player_values(char_name){
 				jumps: 3,
 				dodges: 1,
 				name: "Kronos"
+			},
+			sounds: {
+				running: audio_play_sound(running_sound, 1, false),
+				jumping: audio_play_sound(jumping_sound, 1, false),
+				light_attack_sound: audio_play_sound(sword_swing_lite, 1, false),
+				heavy_attack_sound: audio_play_sound(sword_swing_heavy, 1, false),
+				fire_sound: audio_play_sound(fire_whoosh, 1, false)
 			}
 		};
 	case obj_Poseidon:
@@ -66,6 +80,13 @@ function get_player_values(char_name){
 				jumps: 3,
 				dodges: 1,
 				name: "Poseidon"
+			},
+			sounds: {
+				running: audio_play_sound(running_sound, 1, false),
+				jumping: audio_play_sound(jumping_sound, 1, false),
+				light_attack_sound: audio_play_sound(spear_stab, 1, false),
+				heavy_attack_sound: audio_play_sound(spear_stab, 1, false),
+				water_sound: audio_play_sound(water_splash, 1, false)
 			}
 		};
 	case obj_Minotaur:

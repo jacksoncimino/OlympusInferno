@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"fire_whoosh",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":5.0416327,
+  "name":"fire_whoosh",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"fire_whoosh.mp3",
+  "type":0,
+  "volume":1.0,
+}
