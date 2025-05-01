@@ -19,6 +19,9 @@ if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak
 			player1 = obj_Poseidon
 		break;
 		case 3:
+			player1 = obj_Cyclops
+		break;
+		case 4:
 			player1 = obj_Minotaur
 		break;
 	}
@@ -33,6 +36,9 @@ if (room == r_Olympus_Multi or room == r_Underworld_Multi or room == r_SnowyPeak
 			player2 = obj_Poseidon
 		break;
 		case 3:
+			player2 = obj_Cyclops
+		break;
+		case 4:
 			player2 = obj_Minotaur
 		break;
 	}

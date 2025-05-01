@@ -12,3 +12,5 @@ p1_lock = false
 p2_lock = false
 
 alarmset = false
+
+mapenter = false

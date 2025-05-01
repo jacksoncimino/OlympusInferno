@@ -113,6 +113,9 @@ if(room = r_MultiplayerSelect) {
 			obj_p1_char.sprite_index = spr_poseidon_idle
 		break;
 		case 3:
+			obj_p1_char.sprite_index = spr_cyclops_idle
+		break;
+		case 4:
 			obj_p1_char.sprite_index = spr_minotaur_idle
 		break;
 	}
@@ -127,6 +130,9 @@ if(room = r_MultiplayerSelect) {
 			obj_p2_char.sprite_index = spr_poseidon_idle
 		break;
 		case 3:
+			obj_p2_char.sprite_index = spr_cyclops_idle
+		break;
+		case 4:
 			obj_p2_char.sprite_index = spr_minotaur_idle
 		break;
 	}
@@ -199,15 +205,15 @@ if(room = r_MultiplayerSelect) {
 		audio_play_sound(Menu_Select, 1, false)
 	}
 	
-	if(player1 > 3) {
+	if(player1 > 4) {
 		player1 = 0
 	} else if(player1 < 0) {
-		player1 = 3
+		player1 = 4
 	}
-	if(player2 > 3) {
+	if(player2 > 4) {
 		player2 = 0
 	} else if(player2 < 0) {
-		player2 = 3
+		player2 = 4
 	}
 	
 	if(keyboard_check_pressed(vk_backspace) or keyboard_check_pressed(vk_escape) or _B or _Y) {
