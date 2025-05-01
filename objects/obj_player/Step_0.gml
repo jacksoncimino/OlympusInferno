@@ -107,7 +107,7 @@ and image_index >= 1 and image_index <= 5{
 
 //heavy attack hitbox
 if (player_state == player_states.HEAVY_ATTACK || sprite_index == spr_heavy_attack ) 
-and image_index >= 7 and image_index <= 7{
+and image_index >= 7 and image_index <= 9{
 	//create hitbox for attack
 	var hb_startX = 0
 	var hb_startY = 0

@@ -97,11 +97,11 @@ function get_player_values(char_name){
 				move: spr_cyclops_run,
 				dodge: spr_cyclops_idle,
 				attack: spr_cyclops_attack,
-				attack2: spr_cyclops_attack,
-				heavy_attack: spr_cyclops_attack,
+				attack2: spr_cyclops_attack_2,
+				heavy_attack: spr_cyclops_attack_heavy,
 				parry: spr_cyclops_idle,
 				jump: spr_cyclops_jump,
-				special: spr_zeus_special
+				special: spr_cyclops_special
 			},
 			stats: {
 				xspd_max: 5,
