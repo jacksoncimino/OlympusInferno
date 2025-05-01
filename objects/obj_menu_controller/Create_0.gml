@@ -1,6 +1,7 @@
 single_player = 0
 
 map = 0
+mapenter = false
 
 controller_stick_cooldown = false
 
