@@ -29,6 +29,15 @@ spr_parry = char_vals.sprites.parry
 spr_jump = char_vals.sprites.jump
 spr_special = char_vals.sprites.special
 
+//sounds
+if(char_vals.sounds) {
+	snd_run = char_vals.sounds.running
+	snd_jump = char_vals.sounds.jumping
+	snd_light_attack = char_vals.sounds.light_attack_sound
+	snd_heavy_attack = char_vals.sounds.heavy_attack_sound
+	snd_special = char_vals.sounds.special
+}
+
 combo_active = false
 
 //special attack threshold

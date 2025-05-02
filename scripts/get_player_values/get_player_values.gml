@@ -24,11 +24,11 @@ function get_player_values(char_name){
 				name: "Zeus"
 			},
 			sounds: {
-				running: audio_play_sound(running_sound, 1, false),
-				jumping: audio_play_sound(jumping_sound, 1, false),
-				light_attack_sound: audio_play_sound(sword_swing_lite, 1, false),
-				heavy_attack_sound: audio_play_sound(sword_swing_heavy, 1, false),
-				lightning_sound: audio_play_sound(lightning_strike, 1, false)
+				running: running_sound,
+				jumping: jumping_sound,
+				light_attack_sound: sword_swing_lite,
+				heavy_attack_sound: sword_swing_heavy,
+				special: lightning_strike
 			}
 		};
 	case obj_Kronos:
@@ -53,11 +53,11 @@ function get_player_values(char_name){
 				name: "Kronos"
 			},
 			sounds: {
-				running: audio_play_sound(running_sound, 1, false),
-				jumping: audio_play_sound(jumping_sound, 1, false),
-				light_attack_sound: audio_play_sound(sword_swing_lite, 1, false),
-				heavy_attack_sound: audio_play_sound(sword_swing_heavy, 1, false),
-				fire_sound: audio_play_sound(fire_whoosh, 1, false)
+				running: running_sound,
+				jumping: jumping_sound,
+				light_attack_sound: sword_swing_lite,
+				heavy_attack_sound: sword_swing_heavy,
+				special: fire_whoosh
 			}
 		};
 	case obj_Poseidon:
@@ -82,11 +82,11 @@ function get_player_values(char_name){
 				name: "Poseidon"
 			},
 			sounds: {
-				running: audio_play_sound(running_sound, 1, false),
-				jumping: audio_play_sound(jumping_sound, 1, false),
-				light_attack_sound: audio_play_sound(spear_stab, 1, false),
-				heavy_attack_sound: audio_play_sound(spear_stab, 1, false),
-				water_sound: audio_play_sound(water_splash, 1, false)
+				running: running_sound,
+				jumping: jumping_sound,
+				light_attack_sound: spear_stab,
+				heavy_attack_sound: spear_stab,
+				special: water_splash,
 			}
 		};
 	case obj_Minotaur:
@@ -96,11 +96,11 @@ function get_player_values(char_name){
 				move: spr_minotaur_run,
 				dodge: spr_minotaur_idle,
 				attack: spr_minotaur_attack,
-				attack2: spr_minotaur_attack,
-				heavy_attack: spr_minotaur_attack,
+				attack2: spr_minotaur_attack_2,
+				heavy_attack: spr_minotaur_attack_heavy,
 				parry: spr_minotaur_idle,
 				jump: spr_minotaur_jump,
-				special: spr_zeus_special
+				special: spr_minotaur_special
 			},
 			stats: {
 				xspd_max: 5,
@@ -109,6 +109,13 @@ function get_player_values(char_name){
 				jumps: 3,
 				dodges: 1,
 				name: "Minotaur"
+			},
+			sounds: {
+				running: running_sound,
+				jumping: jumping_sound,
+				light_attack_sound: sword_swing_lite,
+				heavy_attack_sound: sword_swing_heavy,
+				special: water_splash,
 			}
 		};
 	case obj_Cyclops:
@@ -131,6 +138,13 @@ function get_player_values(char_name){
 				jumps: 3,
 				dodges: 1,
 				name: "Cyclops"
+			},
+			sounds: {
+				running: running_sound,
+				jumping: jumping_sound,
+				light_attack_sound: sword_swing_lite,
+				heavy_attack_sound: sword_swing_heavy,
+				special: water_splash,
 			}
 		};	
 	case obj_player1:

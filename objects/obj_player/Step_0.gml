@@ -37,13 +37,19 @@ if (player_state == player_states.NONE || player_state == player_states.LIGHT_AT
 	if (_move == 1 and xsp < max_spd) xsp = min(max_spd, xsp + acceleration); //accelerate going right
     if (_move == -1 and xsp > -max_spd) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
 	if (_move == 0) {
+		//audio_stop_sound(snd_run)
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
 		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK 
-		and sprite_index != spr_jump and sprite_index != spr_special) {sprite_index = spr_basic}
+		and sprite_index != spr_jump and sprite_index != spr_special) {
+			sprite_index = spr_basic
+		}
 	} else {
 		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK 
-		and sprite_index != spr_jump and sprite_index != spr_special) {sprite_index = spr_move}
+		and sprite_index != spr_jump and sprite_index != spr_special) {
+			sprite_index = spr_move
+			if(!audio_is_playing(snd_run)) { audio_play_sound(snd_run, 1, false) }
+		} 
 		image_xscale = _move
 	}
 }
