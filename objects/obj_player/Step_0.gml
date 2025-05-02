@@ -37,7 +37,6 @@ if (player_state == player_states.NONE || player_state == player_states.LIGHT_AT
 	if (_move == 1 and xsp < max_spd) xsp = min(max_spd, xsp + acceleration); //accelerate going right
     if (_move == -1 and xsp > -max_spd) xsp = max(-max_spd, xsp - acceleration); //accelerate going left
 	if (_move == 0) {
-		//audio_stop_sound(snd_run)
 		if (xsp > 0) xsp = max(0, xsp - frict); //friction going right
 		if (xsp < 0) xsp = min(0, xsp + frict); //friction going left
 		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK 
@@ -48,7 +47,6 @@ if (player_state == player_states.NONE || player_state == player_states.LIGHT_AT
 		if (player_state != player_states.LIGHT_ATTACK and player_state != player_states.HEAVY_ATTACK 
 		and sprite_index != spr_jump and sprite_index != spr_special) {
 			sprite_index = spr_move
-			if(!audio_is_playing(snd_run)) { audio_play_sound(snd_run, 1, false) }
 		} 
 		image_xscale = _move
 	}
@@ -65,10 +63,10 @@ and image_index >= 1 and image_index <= 5{
 	var rect_y2 = 0
 	
 	if(name = "Poseidon") {
-		hb_startX = 50
+		hb_startX = 40
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = 30
+		rect_x2 = 40
 		rect_y1 = 20
 		rect_y2 = 10
 		if(sprite_index != spr_attack) {
@@ -123,10 +121,10 @@ and image_index >= 7 and image_index <= 9{
 	var rect_y2 = 0
 	
 	if(name = "Poseidon") {
-		hb_startX = 65
+		hb_startX = 55
 		hb_startY = 0
 		rect_x1 = 0
-		rect_x2 = 30
+		rect_x2 = 40
 		rect_y1 = 20
 		rect_y2 = 10
 	} else {
@@ -254,6 +252,7 @@ if (_quickattackkey and on_wall == false) {
 		
 		image_index = 0
 		player_state = player_states.LIGHT_ATTACK
+		audio_play_sound(snd_light_attack, 1, false)
 	}
 }
 
