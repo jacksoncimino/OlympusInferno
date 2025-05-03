@@ -85,7 +85,7 @@ if(room = r_ModeSelect) {
 			audio_stop_sound(Menu_Select)
 			audio_play_sound(Menu_Select, 1, false)
 			audio_stop_sound(OI_Menu_bkgnd)
-			room_goto(r_Underworld_Single_Story)
+			room_goto(r_Olympus_Single_Story)
 		} else if (single_player == 0) {
 			room_goto(r_MultiplayerSelect)
 			audio_stop_sound(Menu_Click)
