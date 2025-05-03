@@ -101,6 +101,7 @@ if place_meeting(x+xsp, y, _plat) || place_meeting(x-xsp, y, _plat) {
 	if(!on_wall) {ysp = 0.5}
 	else {ysp -= 0.29}
 	on_wall = true
+	x += xsp * -1
 } else {
 	on_wall = false
 }

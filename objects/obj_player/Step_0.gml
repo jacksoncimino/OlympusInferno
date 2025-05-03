@@ -297,15 +297,19 @@ if( _specialattackkey) {
 			} else if (name == "Poseidon") {
 				var _waterball = undefined
 				var _player = undefined
-				for(var i = 0;i<instance_number(obj_player);i++){
-				    var _currplayer = instance_find(obj_player,i);
+				if(obj_level_controller.multiPlayer) {
+					for(var i = 0;i<instance_number(obj_player);i++){
+					    var _currplayer = instance_find(obj_player,i);
 
-				    if _currplayer.id == id{
-						continue
-				    } else {
-						_player = _currplayer
-						break
+					    if _currplayer.id == id{
+							continue
+					    } else {
+							_player = _currplayer
+							break
+						}
 					}
+				} else { 
+					_player = obj_enemy
 				}
 				var _offsetY = 70
 				_waterball = instance_create_layer(_player.x, _player.y - _offsetY, "Instances", obj_water_ball)

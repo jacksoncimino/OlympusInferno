@@ -41,8 +41,8 @@ if(room == r_Underworld_Single_Story) {
 	draw_set_color(c_white)
 	draw_set_halign(fa_center)
 	draw_text(room_width / 2, 200, "Olympus was saved from destruction\n The Gods held a meeting to get to the bottom of the source of the attack.\n" +
-		"Suspicious of Hades, the God of the underworld, the Gods send Hera to confront Hades.\n" +
-		"Unfortunately, before she is able to speak with him, she runs into a minotaur guarding \nthe entrance to Hades' fortress." +
+		"Suspicious of Hades, the God of the underworld, the Gods send Poseidon to confront Hades.\n" +
+		"Unfortunately, before he is able to speak with Hades, he runs into a minotaur guarding \nthe entrance to Hades' fortress." +
 		"\n\n\n\n\n\n\nPRESS ENTER TO START")
 }
 
@@ -50,10 +50,10 @@ if(room == r_SnowyPeak_Single_Story) {
 	draw_set_font(fnt_char_header)
 	draw_set_color(c_black)
 	draw_set_halign(fa_center)
-	draw_text(room_width / 2, 200, "Hera was able to get inside the underworld fortress and interrogate Hades.\n" +
+	draw_text(room_width / 2, 200, "Poseidon was able to get inside the underworld fortress and interrogate Hades.\n" +
 		"Hades claimed to not be the one who attacked Olympus,\nsaying instead that the titan Kronos had returned.\n" +
 		"The Gods were suspicious of this answer, as Kronos had been sealed away for eternity.\n" +
-		"To get more answers, Poseidon is sent deep into the northern mountains to get answers." +
+		"To get more answers, Poseidon is sent deep into the northern mountains." +
 		"\n\n\n\n\n\n\nPRESS ENTER TO START")
 }
 

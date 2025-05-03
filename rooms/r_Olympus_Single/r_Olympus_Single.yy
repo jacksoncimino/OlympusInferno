@@ -6,12 +6,12 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_18ED4D97","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
-    {"name":"inst_60DE81A3","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
     {"name":"inst_36258B0C","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
-    {"name":"inst_2B0218A7","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
-    {"name":"inst_4F69FFAE","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
     {"name":"inst_72B975AA","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
+    {"name":"inst_2A61016B","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
+    {"name":"inst_18ED4D97","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
+    {"name":"inst_4F69FFAE","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
+    {"name":"inst_2B0218A7","path":"rooms/r_Olympus_Single/r_Olympus_Single.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -21,10 +21,10 @@
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v2","%Name":"inst_18ED4D97","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_18ED4D97","objectId":{"name":"obj_level_controller","path":"objects/obj_level_controller/obj_level_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":480.0,"y":128.0,},
         {"$GMRInstance":"v2","%Name":"inst_72B975AA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_72B975AA","objectId":{"name":"obj_Zeus","path":"objects/obj_Zeus/obj_Zeus.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":416.0,"y":352.0,},
-        {"$GMRInstance":"v2","%Name":"inst_60DE81A3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_60DE81A3","objectId":{"name":"obj_Kronos","path":"objects/obj_Kronos/obj_Kronos.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":960.0,"y":352.0,},
         {"$GMRInstance":"v2","%Name":"inst_36258B0C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_36258B0C","objectId":{"name":"obj_platform_invisible","path":"objects/obj_platform_invisible/obj_platform_invisible.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":10.796875,"scaleY":11.890625,"x":703.5,"y":803.5,},
         {"$GMRInstance":"v2","%Name":"inst_2B0218A7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2B0218A7","objectId":{"name":"obj_p1_arrow","path":"objects/obj_p1_arrow/obj_p1_arrow.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":1152.0,"y":64.0,},
         {"$GMRInstance":"v2","%Name":"inst_4F69FFAE","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4F69FFAE","objectId":{"name":"obj_p2_arrow","path":"objects/obj_p2_arrow/obj_p2_arrow.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":1216.0,"y":128.0,},
+        {"$GMRInstance":"v2","%Name":"inst_2A61016B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2A61016B","objectId":{"name":"obj_Cyclops","path":"objects/obj_Cyclops/obj_Cyclops.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":992.0,"y":384.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":{"name":"spr_olympus_background","path":"sprites/spr_olympus_background/spr_olympus_background.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
